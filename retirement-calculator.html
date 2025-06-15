@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Calculator | Financial Freedom in Japan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
+            <div class="header-controls">
+                <ul class="nav-links-desktop">
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_learn">Learn</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="pension.html" data-lang-key="nav_pension">Pension</a></li>
+                                <li><a href="insurance.html" data-lang-key="nav_insurance">Insurance</a></li>
+                                <li><a href="investing.html" data-lang-key="nav_investing">Investing</a></li>
+                                <li><a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_resources">Resources</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
+                                <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" data-lang-key="nav_plan">Plan</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a></li>
+                                <li><a href="retirement-calculator.html" class="active" data-lang-key="nav_retirement_calc">Retirement Calc</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+                <div class="utility-controls">
+                    <button class="theme-switcher" id="theme-switcher" aria-label="Toggle theme">☀️</button>
+                    <button id="language-switcher" aria-label="Switch language">日本語</button>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Open menu">☰</button>
+            </div>
+        </nav>
+        <div class="nav-links-mobile" id="nav-links-mobile">
+            <a href="pension.html" data-lang-key="nav_pension">Pension</a>
+            <a href="insurance.html" data-lang-key="nav_insurance">Insurance</a>
+            <a href="investing.html" data-lang-key="nav_investing">Investing</a>
+            <a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a>
+            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
+            <a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a>
+            <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
+            <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
+            <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="retirement_calc_page_title">"What's My Number?" Retirement Calculator</h2>
+            <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="retirement_calc_subtitle">Find out the total amount you need to save to live the retirement you want. This gives you a clear, powerful goal to aim for.</p>
+
+            <div class="calculator-container" data-aos="fade-up">
+                <div class="form-group">
+                    <label for="desired-income" data-lang-key="retirement_calc_label1">
+                        1. Desired Monthly Income in Retirement (JPY)
+                        <div class="tooltip">?
+                            <span class="tooltiptext">How much money do you want to live on each month after you stop working? A common goal is between ¥250,000 and ¥350,000.</span>
+                        </div>
+                    </label>
+                    <input type="number" id="desired-income" placeholder="e.g., 300000">
+                </div>
+                <div class="form-group">
+                    <label for="pension-income" data-lang-key="retirement_calc_label2">
+                        2. Estimated Monthly Pension Income (JPY)
+                        <div class="tooltip">?
+                            <span class="tooltiptext">Enter your estimated monthly pension from our Pension Calculator or your official Nenkin Net statement.</span>
+                        </div>
+                    </label>
+                    <input type="number" id="pension-income" placeholder="e.g., 150000">
+                </div>
+                <div class="form-group">
+                    <label for="retirement-years" data-lang-key="retirement_calc_label3">
+                        3. How many years will you be in retirement?
+                        <div class="tooltip">?
+                            <span class="tooltiptext">A common estimate is 20-30 years. For example, retiring at 65 and living to 90 is 25 years.</span>
+                        </div>
+                    </label>
+                    <input type="number" id="retirement-years" placeholder="e.g., 25">
+                </div>
+                <button id="calculate-retirement-btn" class="btn btn-primary" style="width: 100%;" data-lang-key="retirement_calc_btn">Calculate My Retirement Goal</button>
+
+                <div class="results" id="retirement-results" style="display:none;">
+                    <h4>Your Retirement Goal:</h4>
+                    <p class="result-value" id="nest-egg-amount">¥0</p>
+                    <div id="retirement-chart-container" style="margin: 2rem 0;">
+                        <canvas id="retirement-bar-chart"></canvas>
+                    </div>
+                    <div class="results-explanation" id="retirement-explanation">
+                        <!-- Explanation text will be inserted here by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-lang-key="footer_copyright">© 2024 Your Company Name. All Rights Reserved.</p>
+            <p class="disclaimer" data-lang-key="footer_disclaimer">This website provides educational information and is not financial advice. Consult with a qualified professional before making financial decisions.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script src="js/theme.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/chart-integration.js"></script>
+    <script src="js/retirement-calculator.js"></script>
+</body>
+</html>

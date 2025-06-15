@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Financial Freedom in Japan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
+            <div class="header-controls">
+                <ul class="nav-links-desktop">
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_learn">Learn</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="pension.html" data-lang-key="nav_pension">Pension</a></li>
+                                <li><a href="insurance.html" data-lang-key="nav_insurance">Insurance</a></li>
+                                <li><a href="investing.html" data-lang-key="nav_investing">Investing</a></li>
+                                <li><a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" data-lang-key="nav_resources">Resources</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="casestudies.html" class="active" data-lang-key="nav_casestudies">Case Studies</a></li>
+                                <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_plan">Plan</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a></li>
+                                <li><a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+                <div class="utility-controls">
+                    <button class="theme-switcher" id="theme-switcher" aria-label="Toggle theme">☀️</button>
+                    <button id="language-switcher" aria-label="Switch language">日本語</button>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Open menu">☰</button>
+            </div>
+        </nav>
+        <div class="nav-links-mobile" id="nav-links-mobile">
+            <a href="pension.html" data-lang-key="nav_pension">Pension</a>
+            <a href="insurance.html" data-lang-key="nav_insurance">Insurance</a>
+            <a href="investing.html" data-lang-key="nav_investing">Investing</a>
+            <a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a>
+            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
+            <a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a>
+            <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
+            <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
+            <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="casestudies_title">Real Stories, Real Results</h2>
+            <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="casestudies_subtitle">The names have been changed, but the financial challenges are real. See how understanding a few key principles transformed these individuals' futures.</p>
+            
+            <div class="card-grid">
+                <div class="card" data-aos="fade-up">
+                    <h3 data-lang-key="case1_title">"Tanaka-san": The Hidden Insurance Trap</h3>
+                    <p data-lang-key="case1_p1"><strong>Situation:</strong> Tanaka-san (45) was diligently paying ¥30,000/month into a "savings-type" insurance policy, believing it was his primary retirement fund.</p>
+                    <p data-lang-key="case1_p2"><strong>Revelation:</strong> Using our calculator, he discovered that after 20 years, his ¥7.2 million in payments would only be worth ¥7.5 million—a minuscule return. An investment plan could have reached over ¥15 million.</p>
+                    <p data-lang-key="case1_p3"><strong>Outcome:</strong> He restructured his plan, buying cheaper term insurance for protection and investing the difference, doubling his potential retirement fund.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 data-lang-key="case2_title">"The Cost of Waiting": Sato-san's ¥10 Million Mistake</h3>
+                    <p data-lang-key="case2_p1"><strong>Situation:</strong> Sato-san (35) knew she should invest but kept saying "I'll do it someday."</p>
+                    <p data-lang-key="case2_p2"><strong>Revelation:</strong> The interactive tool on our Investing page showed that starting at 35 vs. 30 would cost her over ¥10M in growth by age 65 due to lost compounding time.</p>
+                    <p data-lang-key="case2_p3"><strong>Outcome:</strong> The shocking visual motivated her to start an automated monthly investment plan immediately.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 data-lang-key="case3_title">"John's" Expat Pension Panic</h3>
+                    <p data-lang-key="case3_p1"><strong>Situation:</strong> John (42), a foreign resident, was worried about losing 15 years of pension payments when he planned to leave Japan.</p>
+                    <p data-lang-key="case3_p2"><strong>Revelation:</strong> He learned about the Lump-sum Withdrawal was capped at 5 years and that he could access global investments from Japan.</p>
+                    <p data-lang-key="case3_p3"><strong>Outcome:</strong> He started a portable investment plan, creating a nest egg independent of his residency status, giving him true financial freedom.</p>
+                </div>
+                <div class="card" data-aos="fade-up">
+                    <h3 data-lang-key="case4_title">"The Illusion of Safety": Suzuki-san's Bank Account</h3>
+                    <p data-lang-key="case4_p1"><strong>Situation:</strong> Suzuki-san (50) had ¥20 million saved in a major Japanese bank, feeling secure.</p>
+                    <p data-lang-key="case4_p2"><strong>Revelation:</strong> She realized that with 2% inflation, her savings were losing ¥400,000 in purchasing power each year, while her 0.001% interest earned only ¥200. She was silently losing money.</p>
+                    <p data-lang-key="case4_p3"><strong>Outcome:</strong> She moved a portion of her savings into a diversified, inflation-beating investment portfolio.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 data-lang-key="case5_title">"Building the House": The Kimura Family's Plan</h3>
+                    <p data-lang-key="case5_p1"><strong>Situation:</strong> The Kimura couple felt overwhelmed and didn't know where to start with financial planning.</p>
+                    <p data-lang-key="case5_p2"><strong>Revelation:</strong> The "Build Your House" analogy provided a clear, step-by-step framework: understand the foundation (pension), build the walls (investments), and protect it with a roof (proper insurance).</p>
+                    <p data-lang-key="case5_p3"><strong>Outcome:</strong> They created their first-ever comprehensive financial plan, giving them immense peace of mind.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 data-lang-key="case6_title">"Retirement Gap Shock": Watanabe-san's Goal</h3>
+                    <p data-lang-key="case6_p1"><strong>Situation:</strong> Watanabe-san (48) assumed his pension would be enough for his desired ¥300,000/month retirement lifestyle.</p>
+                    <p data-lang-key="case6_p2"><strong>Revelation:</strong> The Retirement Calculator showed his estimated pension was only ¥180,000/month, leaving a ¥120,000 "gap." This meant he needed to accumulate a nest egg of ¥36 million to cover 25 years of retirement.</p>
+                    <p data-lang-key="case6_p3"><strong>Outcome:</strong> With a clear target number, he created an aggressive savings and investment plan to bridge the gap.</p>
+                </div>
+                <div class="card" data-aos="fade-up">
+                    <h3 data-lang-key="case7_title">"Better Off Dead": The Life Insurance Fallacy</h3>
+                    <p data-lang-key="case7_p1"><strong>Situation:</strong> A young couple bought a whole life insurance policy as their first "investment."</p>
+                    <p data-lang-key="case7_p2"><strong>Revelation:</strong> They calculated that the cash value after 20 years would be less than what they paid in. The only way to "profit" was if one of them passed away early.</p>
+                    <p data-lang-key="case7_p3"><strong>Outcome:</strong> They realized they were planning for death, not for life, and shifted their strategy to prioritize wealth building for their shared future.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 data-lang-key="case8_title">"The Freelancer's Dilemma": No Kosei Nenkin</h3>
+                    <p data-lang-key="case8_p1"><strong>Situation:</strong> A freelance designer (38) was only paying into the basic Kokumin Nenkin.</p>
+                    <p data-lang-key="case8_p2"><strong>Revelation:</strong> The pension calculator showed her an estimated retirement income of only ~¥65,000/month. She had no company pension to supplement it.</p>
+                    <p data-lang-key="case8_p3"><strong>Outcome:</strong> Realizing she was solely responsible for her retirement, she started using iDeCo for tax benefits and a separate investment account to build her "private pension."</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 data-lang-key="case9_title">"The NISA Trap": Investing Without Knowledge</h3>
+                    <p data-lang-key="case9_p1"><strong>Situation:</strong> Ito-san opened a NISA account but was too scared to choose an investment, so the money just sat as cash.</p>
+                    <p data-lang-key="case9_p2"><strong>Revelation:</strong> He learned that NISA is just a tax-free "container." The container is useless unless you fill it with assets that can actually grow.</p>
+                    <p data-lang-key="case9_p3"><strong>Outcome:</strong> After attending a seminar to understand the basics of index funds, he finally invested his NISA contribution, turning the tax-free wrapper into a powerful growth tool.</p>
+                </div>
+                <div class="card" data-aos="fade-up">
+                    <h3 data-lang-key="case10_title">"From Gaman to Growth": Breaking the Cycle</h3>
+                    <p data-lang-key="case10_p1"><strong>Situation:</strong> A family was stuck in the "gaman" mindset, enduring low bank interest because it felt "safe" and familiar.</p>
+                    <p data-lang-key="case10_p2"><strong>Revelation:</strong> Seeing the "Three Coffee Shops" analogy made them realize their "safe" approach was actually a guaranteed loss against inflation. They were stuck as Shop B, not building a Shop C.</p>
+                    <p data-lang-key="case10_p3"><strong>Outcome:</strong> They overcame their fear of the unknown and made their first strategic investment, breaking a generational cycle of financial inertia.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-lang-key="footer_copyright">© 2024 Your Company Name. All Rights Reserved.</p>
+            <p class="disclaimer" data-lang-key="footer_disclaimer">This website provides educational information and is not financial advice. Consult with a qualified professional before making financial decisions.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script src="js/theme.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>

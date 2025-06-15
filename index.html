@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Freedom in Japan | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
+            <div class="header-controls">
+                <ul class="nav-links-desktop">
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_learn">Learn</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="pension.html" data-lang-key="nav_pension">Pension</a></li>
+                                <li><a href="insurance.html" data-lang-key="nav_insurance">Insurance</a></li>
+                                <li><a href="investing.html" data-lang-key="nav_investing">Investing</a></li>
+                                <li><a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_resources">Resources</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
+                                <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_plan">Plan</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a></li>
+                                <li><a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+                <div class="utility-controls">
+                    <button class="theme-switcher" id="theme-switcher" aria-label="Toggle theme">☀️</button>
+                    <button id="language-switcher" aria-label="Switch language">日本語</button>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Open menu">☰</button>
+            </div>
+        </nav>
+        <div class="nav-links-mobile" id="nav-links-mobile">
+            <a href="pension.html" data-lang-key="nav_pension">Pension</a>
+            <a href="insurance.html" data-lang-key="nav_insurance">Insurance</a>
+            <a href="investing.html" data-lang-key="nav_investing">Investing</a>
+            <a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a>
+            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
+            <a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a>
+            <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
+            <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
+            <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container" data-aos="fade-in">
+                <h1 data-lang-key="index_hero_title">Your Financial Future in Japan: Are You Prepared?</h1>
+                <p class="subtitle" data-lang-key="index_hero_subtitle">The old rules of saving no longer apply. Inflation is eroding your savings, and the pension system is under pressure. It's time to learn the new rules for building wealth.</p>
+                <a href="seminars.html" class="btn btn-primary" data-lang-key="index_hero_button">Unlock Your Financial Potential</a>
+            </div>
+        </section>
+
+        <section class="content-section container">
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="index_section1_title">Why Standard Financial Advice in Japan is Failing You</h2>
+            <div class="card-grid">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 data-lang-key="index_card1_title">The Pension Illusion</h3>
+                    <p data-lang-key="index_card1_text">The government's "model case" is often optimistic. With a shrinking workforce and an aging population, relying solely on the state pension is a high-risk strategy for your retirement.</p>
+                    <a href="pension.html" class="card-link" data-lang-key="index_card1_link">See the Harsh Reality →</a>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 data-lang-key="index_card2_title">The Insurance Trap</h3>
+                    <p data-lang-key="index_card2_text">Many "savings-type" insurance policies are poor investments, burdened with high fees that consume your returns. You could be losing buying power without even realizing it.</p>
+                    <a href="insurance.html" class="card-link" data-lang-key="index_card2_link">Compare Your Policy →</a>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 data-lang-key="index_card3_title">The Stagnation of Savings</h3>
+                    <p data-lang-key="index_card3_text">With near-zero interest rates, money in a typical Japanese bank account is actively losing value to inflation. "Safety" has become a guaranteed slow loss.</p>
+                    <a href="investing.html" class="card-link" data-lang-key="index_card3_link">Learn How to Grow →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section alt-bg">
+            <div class="container">
+                <div class="two-col-layout" data-aos="fade-up">
+                    <div class="text-content">
+                        <h2 data-lang-key="index_section2_title">Knowledge is Your Strongest Weapon</h2>
+                        <p data-lang-key="index_section2_p1">Financial literacy in Japan is surprisingly low. Critical concepts like compound interest are not widely taught, leaving individuals vulnerable to poor advice and inefficient products.</p>
+                        <p data-lang-key="index_section2_p2">Our mission is to bridge that gap. We provide clear, unbiased education to empower you to make informed decisions, avoid common pitfalls, and build a secure financial future for yourself and your family. We don't sell products; we provide education so you can build your financial 'house' on a solid foundation.</p>
+                        <a href="seminars.html" class="btn btn-primary" data-lang-key="index_section2_button">Join a Free Educational Seminar</a>
+                    </div>
+                    <div class="image-content">
+                        <img src="images/education.jpg" alt="A person studying financial charts">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p data-lang-key="footer_copyright">© 2024 Your Company Name. All Rights Reserved.</p>
+            <p class="disclaimer" data-lang-key="footer_disclaimer">This website provides educational information and is not financial advice. Consult with a qualified professional before making financial decisions.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+    <script src="js/theme.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>

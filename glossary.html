@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Glossary | Financial Freedom in Japan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
+            <div class="header-controls">
+                <ul class="nav-links-desktop">
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_learn">Learn</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="pension.html" data-lang-key="nav_pension">Pension</a></li>
+                                <li><a href="insurance.html" data-lang-key="nav_insurance">Insurance</a></li>
+                                <li><a href="investing.html" data-lang-key="nav_investing">Investing</a></li>
+                                <li><a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" data-lang-key="nav_resources">Resources</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
+                                <li><a href="glossary.html" class="active" data-lang-key="nav_glossary">Glossary</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_plan">Plan</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a></li>
+                                <li><a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+                <div class="utility-controls">
+                    <button class="theme-switcher" id="theme-switcher" aria-label="Toggle theme">☀️</button>
+                    <button id="language-switcher" aria-label="Switch language">日本語</button>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Open menu">☰</button>
+            </div>
+        </nav>
+        <div class="nav-links-mobile" id="nav-links-mobile">
+            <a href="pension.html" data-lang-key="nav_pension">Pension</a>
+            <a href="insurance.html" data-lang-key="nav_insurance">Insurance</a>
+            <a href="investing.html" data-lang-key="nav_investing">Investing</a>
+            <a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a>
+            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
+            <a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a>
+            <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
+            <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
+            <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="glossary_title">Financial Glossary</h2>
+            <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="glossary_subtitle">Demystifying the jargon of Japanese finance.</p>
+
+            <div class="card" data-aos="fade-up" style="margin-bottom:1.5rem;">
+                <h4 data-lang-key="glossary_term1_title"><strong>複利 (Fukuri)</strong> - Compound Interest</h4>
+                <p data-lang-key="glossary_term1_def">Interest that is calculated on the initial principal and also on the accumulated interest from previous periods. It's often called "interest on interest" and is the engine of wealth growth.</p>
+            </div>
+            <div class="card" data-aos="fade-up" style="margin-bottom:1.5rem;">
+                <h4 data-lang-key="glossary_term2_title"><strong>元本 (Ganpon)</strong> - Principal</h4>
+                <p data-lang-key="glossary_term2_def">The initial amount of money invested or borrowed, separate from any earnings or interest.</p>
+            </div>
+            <div class="card" data-aos="fade-up" style="margin-bottom:1.5rem;">
+                <h4 data-lang-key="glossary_term3_title"><strong>解約返戻金 (Kaiyaku Henreikin)</strong> - Cash Surrender Value</h4>
+                <p data-lang-key="glossary_term3_def">The sum of money an insurance company pays to the policyholder if they cancel a life insurance policy before its maturity date or the insured event occurs.</p>
+            </div>
+            <div class="card" data-aos="fade-up" style="margin-bottom:1.5rem;">
+                <h4 data-lang-key="glossary_term4_title"><strong>掛け捨て (Kake-sute)</strong> - Term / "Throw-away" Insurance</h4>
+                <p data-lang-key="glossary_term4_def">A type of insurance that provides coverage for a specific period (the "term"). There is no savings component or cash value. It's pure protection and therefore much cheaper than savings-type insurance.</p>
+            </div>
+            <div class="card" data-aos="fade-up" style="margin-bottom:1.5rem;">
+                <h4 data-lang-key="glossary_term5_title"><strong>NISA (ニーサ)</strong> - Nippon Individual Savings Account</h4>
+                <p data-lang-key="glossary_term5_def">A tax-exemption program for investments in Japan. It allows individuals to invest a certain amount each year where the capital gains and dividends are tax-free. Good for flexibility.</p>
+            </div>
+            <div class="card" data-aos="fade-up" style="margin-bottom:1.5rem;">
+                <h4 data-lang-key="glossary_term6_title"><strong>iDeCo (イデコ)</strong> - Individual-type Defined Contribution Pension Plan</h4>
+                <p data-lang-key="glossary_term6_def">A personal pension plan where contributions are tax-deductible, offering significant tax savings. The funds are invested and grow tax-free, but are locked until age 60.</p>
+            </div>
+            <div class="card" data-aos="fade-up" style="margin-bottom:1.5rem;">
+                <h4 data-lang-key="glossary_term7_title"><strong>脱退一時金 (Dattai Ichijikin)</strong> - Lump-sum Withdrawal Payment</h4>
+                <p data-lang-key="glossary_term7_def">A one-time refund of pension contributions available to non-Japanese citizens who have paid for at least 6 months and permanently leave Japan.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-lang-key="footer_copyright">© 2024 Your Company Name. All Rights Reserved.</p>
+            <p class="disclaimer" data-lang-key="footer_disclaimer">This website provides educational information and is not financial advice. Consult with a qualified professional before making financial decisions.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script src="js/theme.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>
