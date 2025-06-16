@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Freedom in Japan | Home</title>
+    <title>Resources | Financial Freedom in Japan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    
-    <script>
-        (function() {
-            const theme = localStorage.getItem('theme');
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark-mode');
-            }
-        })();
-    </script>
+    <script>(function(){const theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.classList.add('dark-mode');}})();</script>
 </head>
 <body>
     <header>
@@ -46,13 +38,13 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" data-lang-key="nav_resources">Resources</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
                                 <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
-                                <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
+                                <li><a href="resources.html" class="active" data-lang-key="nav_resources">Resources</a></li>
                             </ul>
                         </div>
                     </li>
@@ -80,62 +72,32 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container" data-aos="fade-in">
-                <h1 data-lang-key="index_hero_title">Your Financial Future in Japan: Are You Prepared?</h1>
-                <p class="subtitle" data-lang-key="index_hero_subtitle">The old rules of saving no longer apply. Inflation is eroding your savings, and the pension system is under pressure. It's time to learn the new rules for building wealth.</p>
-                <a href="seminars.html" class="btn btn-primary" data-lang-key="index_hero_button">Unlock Your Financial Potential</a>
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="resources_title">Helpful Resources</h2>
+            <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="resources_subtitle">Knowledge is power. Here are links to trusted sources to continue your financial literacy journey.</p>
+            
+            <div class="card" data-aos="fade-up">
+                <h3 data-lang-key="resources_official_title">Official Government & Financial Sites</h3>
+                <ul>
+                    <li><a href="https://www.nenkin.go.jp/n_net/" target="_blank" rel="noopener noreferrer" data-lang-key="resources_official_nenkin_net">Nenkin Net</a> - to check your official pension record.</li>
+                    <li><a href="https://www.fsa.go.jp/en/index.html" target="_blank" rel="noopener noreferrer" data-lang-key="resources_official_fsa">Financial Services Agency (FSA)</a> - Japan's financial services regulator.</li>
+                    <li><a href="https://www.boj.or.jp/en/" target="_blank" rel="noopener noreferrer" data-lang-key="resources_official_boj">Bank of Japan (BOJ)</a> - for information on inflation data and monetary policy.</li>
+                </ul>
             </div>
-        </section>
 
-        <section class="content-section container">
-            <h2 class="section-title" data-aos="fade-up" data-lang-key="index_section1_title">Why Standard Financial Advice in Japan is Failing You</h2>
-            <div class="card-grid index-cards">
-                <div class="card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 data-lang-key="index_card1_title">The Pension Illusion</h3>
-                    <p data-lang-key="index_card1_text">The government's "model case" is often optimistic. With a shrinking workforce and an aging population, relying solely on the state pension is a high-risk strategy for your retirement.</p>
-                    <a href="pension.html" class="card-link" data-lang-key="index_card1_link">See the Harsh Reality →</a>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-delay="200">
-                    <h3 data-lang-key="index_card2_title">The Insurance Trap</h3>
-                    <p data-lang-key="index_card2_text">Many "savings-type" insurance policies are poor investments, burdened with high fees that consume your returns. You could be losing buying power without even realizing it.</p>
-                    <a href="insurance.html" class="card-link" data-lang-key="index_card2_link">Compare Your Policy →</a>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-delay="300">
-                    <h3 data-lang-key="index_card3_title">The Stagnation of Savings</h3>
-                    <p data-lang-key="index_card3_text">With near-zero interest rates, money in a typical Japanese bank account is actively losing value to inflation. "Safety" has become a guaranteed slow loss.</p>
-                    <a href="investing.html" class="card-link" data-lang-key="index_card3_link">Learn How to Grow →</a>
-                </div>
+            <div class="card" style="margin-top: 2rem;" data-aos="fade-up">
+                <h3 data-lang-key="resources_reading_title">Recommended Reading (For Philosophy)</h3>
+                <p data-lang-key="resources_reading_p">These books teach the core philosophies of investing and wealth-building that have changed the mindset of millions of people worldwide.</p>
+                <ul>
+                    <li data-lang-key="resources_reading_book1"><strong>The Simple Path to Wealth by J.L. Collins</strong> - The definitive guide to understanding the power and simplicity of index investing.</li>
+                    <li data-lang-key="resources_reading_book2"><strong>I Will Teach You to Be Rich by Ramit Sethi</strong> - A practical system for automating your spending, conscious use of money, and living a rich life.</li>
+                </ul>
             </div>
+             <p style="margin-top:2rem; text-align:center; font-style:italic;" data-aos="fade-up" data-lang-key="resources_disclaimer"><strong>Disclaimer:</strong> We are not affiliated with these resources. They are provided for educational purposes.</p>
         </section>
-
-        <section class="content-section alt-bg">
-            <div class="container">
-                <div class="two-col-layout" data-aos="fade-up">
-                    <div class="text-content">
-                        <h2 data-lang-key="index_section2_title">Knowledge is Your Strongest Weapon</h2>
-                        <p data-lang-key="index_section2_p1">Financial literacy in Japan is surprisingly low. Critical concepts like compound interest are not widely taught, leaving individuals vulnerable to poor advice and inefficient products.</p>
-                        <p data-lang-key="index_section2_p2">Our mission is to bridge that gap. We provide clear, unbiased education to empower you to make informed decisions, avoid common pitfalls, and build a secure financial future for yourself and your family. We don't sell products; we provide education so you can build your financial 'house' on a solid foundation.</p>
-                        <a href="seminars.html" class="btn btn-primary" data-lang-key="index_section2_button">Join a Free Educational Seminar</a>
-                    </div>
-                    <div class="image-content">
-                        <img src="images/education.jpg" alt="A person studying financial charts">
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="content-section container" data-aos="fade-up">
-            <h2 class="section-title" data-lang-key="index_nextsteps_title">Ready to Begin? Start Here.</h2>
-            <div class="card" style="text-align: center;">
-                 <p data-lang-key="index_nextsteps_p">Not sure where to begin? Take our quick Financial Health Check to identify which topics are most relevant to your situation.</p>
-                 <a href="health-check.html" class="btn btn-primary" style="margin-top: 1rem;" data-lang-key="index_nextsteps_btn">Start My Health Check</a>
-            </div>
-        </section>
-
     </main>
-    
+
     <footer>
         <div class="container">
             <p data-lang-key="footer_copyright">© 2024 Your Company Name. All Rights Reserved.</p>
@@ -144,9 +106,7 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1000, once: true });
-    </script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
     <script src="js/theme.js"></script>
     <script src="js/mobile-nav.js"></script>
     <script src="js/translations.js"></script>

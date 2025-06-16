@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Health Check | Financial Freedom in Japan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>(function(){const theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.classList.add('dark-mode');}})();</script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
+            <div class="header-controls">
+                <ul class="nav-links-desktop">
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_learn">Learn</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="pension.html" data-lang-key="nav_pension">Pension</a></li>
+                                <li><a href="insurance.html" data-lang-key="nav_insurance">Insurance</a></li>
+                                <li><a href="investing.html" data-lang-key="nav_investing">Investing</a></li>
+                                <li><a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" data-lang-key="nav_action_plan">Action Plan</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="health-check.html" class="active" data-lang-key="nav_health_check">Financial Health Check</a></li>
+                                <li><a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a></li>
+                                <li><a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-lang-key="nav_resources">Resources</a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
+                                <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
+                                <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+                <div class="utility-controls">
+                    <button class="theme-switcher" id="theme-switcher" aria-label="Toggle theme">☀️</button>
+                    <button id="language-switcher" aria-label="Switch language">日本語</button>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Open menu">☰</button>
+            </div>
+        </nav>
+        <div class="nav-links-mobile" id="nav-links-mobile">
+            <a href="pension.html" data-lang-key="nav_pension">Pension</a>
+            <a href="insurance.html" data-lang-key="nav_insurance">Insurance</a>
+            <a href="investing.html" data-lang-key="nav_investing">Investing</a>
+            <a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a>
+            <a href="health-check.html" data-lang-key="nav_health_check">Health Check</a>
+            <a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a>
+            <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
+            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
+            <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
+            <a href="resources.html" data-lang-key="nav_resources">Resources</a>
+            <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
+        </div>
+    </header>
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="healthcheck_title">The 5-Question Financial Health Check</h2>
+            <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="healthcheck_subtitle">Answer these simple questions to identify which areas of your finances need the most attention.</p>
+
+            <form id="health-check-form" data-aos="fade-up">
+                <div class="health-check-item">
+                    <label data-lang-key="healthcheck_q1">1. Do you know your official projected monthly pension amount?</label>
+                    <div class="options">
+                        <button type="button" class="btn" data-name="q1" data-value="yes" data-lang-key="healthcheck_btn_yes">Yes</button>
+                        <button type="button" class="btn" data-name="q1" data-value="no" data-lang-key="healthcheck_btn_no">No</button>
+                    </div>
+                </div>
+                 <div class="health-check-item">
+                    <label data-lang-key="healthcheck_q2">2. Is more than half of your financial worth in a low-interest bank account?</label>
+                    <div class="options">
+                        <button type="button" class="btn" data-name="q2" data-value="yes" data-lang-key="healthcheck_btn_yes">Yes</button>
+                        <button type="button" class="btn" data-name="q2" data-value="no" data-lang-key="healthcheck_btn_no">No</button>
+                    </div>
+                </div>
+                <div class="health-check-item">
+                    <label data-lang-key="healthcheck_q3">3. Are you currently paying for a "savings-type" or whole-life insurance policy?</label>
+                     <div class="options">
+                        <button type="button" class="btn" data-name="q3" data-value="yes" data-lang-key="healthcheck_btn_yes">Yes</button>
+                        <button type="button" class="btn" data-name="q3" data-value="no" data-lang-key="healthcheck_btn_no">No</button>
+                    </div>
+                </div>
+                 <div class="health-check-item">
+                    <label data-lang-key="healthcheck_q4">4. Can you explain how compound interest works and why it's the most important concept for building wealth?</label>
+                     <div class="options">
+                        <button type="button" class="btn" data-name="q4" data-value="yes" data-lang-key="healthcheck_btn_yes">Yes</button>
+                        <button type="button" class="btn" data-name="q4" data-value="no" data-lang-key="healthcheck_btn_no">No</button>
+                    </div>
+                </div>
+                <div class="health-check-item">
+                    <label data-lang-key="healthcheck_q5">5. Have you calculated your total retirement "number" - the amount you need for a comfortable retirement?</label>
+                     <div class="options">
+                        <button type="button" class="btn" data-name="q5" data-value="yes" data-lang-key="healthcheck_btn_yes">Yes</button>
+                        <button type="button" class="btn" data-name="q5" data-value="no" data-lang-key="healthcheck_btn_no">No</button>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top:2rem;" data-lang-key="healthcheck_btn_results">See My Diagnosis</button>
+            </form>
+
+            <div id="health-check-results-container" style="display: none; margin-top:3rem;">
+                <div class="health-check-results" data-aos="fade-in">
+                    <h3 data-lang-key="healthcheck_results_title">Your Diagnosis & Next Steps</h3>
+                    <p data-lang-key="healthcheck_results_p">Based on your answers, we recommend focusing on these areas:</p>
+                    <ul id="results-list"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p data-lang-key="footer_copyright">© 2024 Your Company Name. All Rights Reserved.</p>
+            <p class="disclaimer" data-lang-key="footer_disclaimer">This website provides educational information and is not financial advice. Consult with a qualified professional before making financial decisions.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('health-check-form');
+            const answers = {};
+
+            form.querySelectorAll('.options button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent form submission
+                    const name = button.dataset.name;
+                    const value = button.dataset.value;
+                    answers[name] = value;
+
+                    // Visual feedback for selected button
+                    button.parentElement.querySelectorAll('button').forEach(btn => btn.classList.remove('selected'));
+                    button.classList.add('selected');
+                });
+            });
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (Object.keys(answers).length < 5) {
+                    alert('Please answer all questions.');
+                    return;
+                }
+
+                const resultsList = document.getElementById('results-list');
+                resultsList.innerHTML = ''; // Clear previous results
+
+                const lang = document.documentElement.lang || 'en';
+                const t = (translations && translations[lang]) ? translations[lang] : {};
+
+                const recommendations = {
+                    q1: t.healthcheck_results_pension || '<strong>Pension:</strong> Knowing your pension number is the first step in planning. Start with our <a href="pension.html">Pension Page</a>.',
+                    q2: t.healthcheck_results_savings || '<strong>Savings & Inflation:</strong> Cash in the bank is silently losing value to inflation. Learn why on our <a href="investing.html">Investing Page</a>.',
+                    q3: t.healthcheck_results_insurance || '<strong>Insurance:</strong> "Savings-type" insurance is often a high-fee, low-return trap. See if yours is worthwhile on our <a href="insurance.html">Insurance Page</a>.',
+                    q4: t.healthcheck_results_compounding || '<strong>Compound Interest:</strong> This is the most important engine for building wealth. It is essential to understand this concept. Learn how it works on our <a href="investing.html">Investing Page</a>.',
+                    q5: t.healthcheck_results_goal || "<strong>Retirement Goal:</strong> Without a target, you can't make a plan. Use our <a href='retirement-calculator.html'>Retirement Calculator</a> to find your number.",
+                    all_yes: t.healthcheck_results_congrats || "Congratulations, you seem to have a good handle on the basics! Explore our <a href='build-your-house.html'>Build Your Plan</a> page to take your planning to the next level."
+                };
+
+                let needsRecommendations = false;
+                
+                if (answers.q1 === 'no') { resultsList.insertAdjacentHTML('beforeend', `<li>${recommendations.q1}</li>`); needsRecommendations = true; }
+                if (answers.q2 === 'yes') { resultsList.insertAdjacentHTML('beforeend', `<li>${recommendations.q2}</li>`); needsRecommendations = true; }
+                if (answers.q3 === 'yes') { resultsList.insertAdjacentHTML('beforeend', `<li>${recommendations.q3}</li>`); needsRecommendations = true; }
+                if (answers.q4 === 'no') { resultsList.insertAdjacentHTML('beforeend', `<li>${recommendations.q4}</li>`); needsRecommendations = true; }
+                if (answers.q5 === 'no') { resultsList.insertAdjacentHTML('beforeend', `<li>${recommendations.q5}</li>`); needsRecommendations = true; }
+
+                if (!needsRecommendations) {
+                     resultsList.insertAdjacentHTML('beforeend', `<li>${recommendations.all_yes}</li>`);
+                }
+
+                document.getElementById('health-check-results-container').style.display = 'block';
+                // Scroll to the results
+                document.getElementById('health-check-results-container').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+    <script src="js/theme.js"></script>
+    <script src="js/mobile-nav.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>
