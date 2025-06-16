@@ -25,7 +25,7 @@
             <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
             <div class="header-controls">
                 <ul class="nav-links-desktop">
-                    <li class="dropdown">
+                    <li class="dropdown" data-nav-category="learn">
                         <a href="#" data-lang-key="nav_learn">Learn</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -36,22 +36,22 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown" data-nav-category="plan">
                         <a href="#" data-lang-key="nav_action_plan">Action Plan</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a href="health-check.html" data-lang-key="nav_health_check">Financial Health Check</a></li>
-                                <li><a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a></li>
+                                <li><a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a></li>
                                 <li><a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown" data-nav-category="resources">
                         <a href="#" data-lang-key="nav_resources">Resources</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
-                                <li><a href="glossary.html" class="active" data-lang-key="nav_glossary">Glossary</a></li>
+                                <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
                                 <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
                             </ul>
                         </div>
@@ -71,7 +71,7 @@
             <a href="investing.html" data-lang-key="nav_investing">Investing</a>
             <a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a>
             <a href="health-check.html" data-lang-key="nav_health_check">Health Check</a>
-            <a href="build-your-house.html" data-lang-key="nav_build_plan">Build Your Plan</a>
+            <a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a>
             <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
             <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
             <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
@@ -79,6 +79,38 @@
             <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
         </div>
     </header>
+
+    <script>
+        // This script will automatically set the active state on the navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const pageMap = {
+                'pension.html': 'learn',
+                'insurance.html': 'learn',
+                'investing.html': 'learn',
+                'foreigners.html': 'learn',
+                'health-check.html': 'plan',
+                'solutions.html': 'plan',
+                'retirement-calculator.html': 'plan',
+                'casestudies.html': 'resources',
+                'glossary.html': 'resources',
+                'resources.html': 'resources'
+            };
+            const currentPage = window.location.pathname.split('/').pop();
+            const activeCategory = pageMap[currentPage];
+
+            if (activeCategory) {
+                const navItem = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
+                if (navItem) {
+                    navItem.classList.add('active');
+                }
+            }
+            
+            const activeLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
+            if(activeLink) {
+                activeLink.classList.add('active');
+            }
+        });
+    </script>
 
     <main class="container">
         <section class="content-section">

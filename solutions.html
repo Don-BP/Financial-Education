@@ -9,7 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script>(function(){const theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.classList.add('dark-mode');}})();</script>
+    
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
 </head>
 <body>
     <header>
@@ -17,7 +25,7 @@
             <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
             <div class="header-controls">
                 <ul class="nav-links-desktop">
-                    <li class="dropdown">
+                    <li class="dropdown" data-nav-category="learn">
                         <a href="#" data-lang-key="nav_learn">Learn</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -28,17 +36,17 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown" data-nav-category="plan">
                         <a href="#" data-lang-key="nav_action_plan">Action Plan</a>
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a href="health-check.html" data-lang-key="nav_health_check">Financial Health Check</a></li>
                                 <li><a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a></li>
-                                <li><a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calculator</a></li>
+                                <li><a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown" data-nav-category="resources">
                         <a href="#" data-lang-key="nav_resources">Resources</a>
                         <div class="dropdown-menu">
                             <ul>
@@ -63,7 +71,7 @@
             <a href="investing.html" data-lang-key="nav_investing">Investing</a>
             <a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a>
             <a href="health-check.html" data-lang-key="nav_health_check">Health Check</a>
-            <a href="solutions.html" data-lang-key="nav_solutions">Solutions</a>
+            <a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a>
             <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
             <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
             <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
@@ -72,54 +80,99 @@
         </div>
     </header>
 
+    <script>
+        // This script will automatically set the active state on the navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const pageMap = {
+                'pension.html': 'learn',
+                'insurance.html': 'learn',
+                'investing.html': 'learn',
+                'foreigners.html': 'learn',
+                'health-check.html': 'plan',
+                'solutions.html': 'plan',
+                'retirement-calculator.html': 'plan',
+                'casestudies.html': 'resources',
+                'glossary.html': 'resources',
+                'resources.html': 'resources'
+            };
+            const currentPage = window.location.pathname.split('/').pop();
+            const activeCategory = pageMap[currentPage];
+
+            if (activeCategory) {
+                const navItem = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
+                if (navItem) {
+                    navItem.classList.add('active');
+                }
+            }
+            
+            const activeLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
+            if(activeLink) {
+                activeLink.classList.add('active');
+            }
+        });
+    </script>
+
     <main class="container">
         <section class="content-section">
-            <h2 class="section-title" data-aos="fade-up" data-lang-key="solutions_title">Charting Your Financial Blueprint</h2>
-            <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="solutions_subtitle">The problems are clear: bank savings are shrinking, insurance is inefficient, and the pension is not enough. So, what do you do? The answer is to create a solid plan and use better tools.</p>
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="solutions_page_title">Charting Your Financial Blueprint</h2>
+            <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="solutions_page_subtitle">The problems are clear: bank savings are shrinking, insurance is inefficient, and the pension is not enough. So, what do you do? The answer is to create a solid plan and use better tools.</p>
 
             <div class="card" data-aos="fade-up">
-                <h3 data-lang-key="solutions_recap_title">The Uncomfortable Truth: A Recap</h3>
+                <h3 data-lang-key="build_plan_recap_title">The Uncomfortable Truth: A Recap</h3>
                 <ul>
-                    <li data-lang-key="solutions_recap_pension"><strong>Pension:</strong> A fragile safety net, not a comfortable retirement plan.</li>
-                    <li data-lang-key="solutions_recap_insurance"><strong>"Savings-type" Insurance:</strong> Inefficient products with hidden high fees that kill growth.</li>
-                    <li data-lang-key="solutions_recap_savings"><strong>Bank Savings:</strong> A guaranteed loss against inflation.</li>
+                    <li data-lang-key="build_plan_recap_pension"><strong>Pension:</strong> A fragile safety net, not a comfortable retirement plan.</li>
+                    <li data-lang-key="build_plan_recap_insurance"><strong>"Savings-type" Insurance:</strong> Inefficient products with hidden high fees that kill growth.</li>
+                    <li data-lang-key="build_plan_recap_savings"><strong>Bank Savings:</strong> A guaranteed loss against inflation.</li>
                 </ul>
             </div>
-
-            <div class="two-col-layout" style="margin-top: 4rem; align-items:center;" data-aos="fade-up">
-                 <div class="text-content">
-                    <h3 data-lang-key="solutions_house_title">Building Your Financial "House"</h3>
-                    <p data-lang-key="solutions_house_p1">You wouldn't build a real house randomly. You need a <strong>blueprint.</strong> The same goes for your financial future.</p>
-                    <ul>
-                        <li data-lang-key="solutions_house_li1">What is the **Foundation**? (Your retirement number)</li>
-                        <li data-lang-key="solutions_house_li2">What are the **Walls** made of? (Your growth engine)</li>
-                        <li data-lang-key="solutions_house_li3">How does the **Roof** protect it? (Proper protection)</li>
-                    </ul>
+            
+            <div style="margin-top: 4rem; text-align: center;" data-aos="fade-up">
+                <h2 class="section-title" data-lang-key="build_plan_house_title">Build Your Financial "House"</h2>
+                 <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-lang-key="build_plan_house_p1">Building a financial future is like building a house. You need a solid plan, starting from the ground up. Complete each step to build your blueprint for success.</p>
+            </div>
+            
+            <div class="house-builder">
+                <!-- Step 1: The Foundation (Understanding) -->
+                <div class="house-component" id="house-foundation" data-aos="fade-up">
+                    <h3 data-lang-key="solutions_page_step1_title">Step 1: The Foundation (Understanding)</h3>
+                    <p data-lang-key="solutions_page_step1_text">No house can stand on a shaky foundation. Start by understanding the reality of your pension and calculating your retirement goals.</p>
+                    <a href="pension.html" class="btn btn-secondary" data-lang-key="solutions_page_step1_btn">Analyze Your Pension</a>
                 </div>
-                <div class="image-content">
-                    <img src="images/blueprint.jpg" alt="A financial blueprint being drawn.">
+
+                <!-- Step 2: The Walls (Growth) -->
+                <div class="house-component" id="house-walls" data-aos="fade-up" data-aos-delay="100">
+                    <h3 data-lang-key="solutions_page_step2_title">Step 2: The Walls (Growth)</h3>
+                    <p data-lang-key="solutions_page_step2_text">Build your walls strong with a solid investment strategy. Learn how to make your money work for you through the power of compounding.</p>
+                    <a href="investing.html" class="btn btn-secondary" data-lang-key="solutions_page_step2_btn">Learn About Investing</a>
+                </div>
+
+                <!-- Step 3: The Roof (Protection) -->
+                <div class="house-component" id="house-roof" data-aos="fade-up" data-aos-delay="200">
+                    <h3 data-lang-key="solutions_page_step3_title">Step 3: The Roof (Protection)</h3>
+                    <p data-lang-key="solutions_page_step3_text">Protect your assets and family with a proper roof. Understand if your current insurance is a high-fee trap or an effective safety net.</p>
+                    <a href="insurance.html" class="btn btn-secondary" data-lang-key="solutions_page_step3_btn">Review Your Insurance</a>
                 </div>
             </div>
 
-            <div class="card" style="margin-top: 2rem;" data-aos="fade-up">
-                <h3 data-lang-key="solutions_opportunity_title">Beyond Japan's Borders: A World of Opportunity</h3>
-                <p data-lang-key="solutions_opportunity_p1">While traditional options in Japan may be lacking, there are established, reputable financial products and strategies available internationally that can offer:</p>
+            <div class="card" style="margin-top: 4rem;" data-aos="fade-up">
+                <h3 data-lang-key="solutions_page_opportunity_title">Beyond Japan's Borders: A World of Opportunity</h3>
+                <p data-lang-key="solutions_page_opportunity_p1">While traditional options in Japan may be lacking, there are established, reputable financial products and strategies available internationally that can offer:</p>
                 <ul>
-                    <li data-lang-key="solutions_opportunity_li1">✅ <strong>True Compound Growth:</strong> The potential for consistent 5-8% returns (or more) that vastly outperform bank accounts and insurance. This is where your money truly starts working for you.</li>
-                    <li data-lang-key="solutions_opportunity_li2">✅ <strong>Efficiency & Transparency:</strong> Products with clear fees, where more of your money is actually working for you, not just lining company pockets.</li>
-                    <li data-lang-key="solutions_opportunity_li3">✅ <strong>Smarter Insurance:</strong> Policies that offer real growth potential alongside protection, and can even be passed on to future generations in a more tax-efficient way.</li>
+                    <li data-lang-key="solutions_page_opportunity_li1">✅ <strong>True Compound Growth:</strong> The potential for consistent 5-8% returns (or more) that vastly outperform bank accounts and insurance. This is where your money truly starts working for you.</li>
+                    <li data-lang-key="solutions_page_opportunity_li2">✅ <strong>Efficiency & Transparency:</strong> Products with clear fees, where more of your money is actually working for you, not just lining company pockets.</li>
+                    <li data-lang-key="solutions_page_opportunity_li3">✅ <strong>Smarter Insurance:</strong> Policies that offer real growth potential alongside protection, and can even be passed on to future generations in a more tax-efficient way.</li>
                 </ul>
             </div>
 
             <div class="reality-check" style="margin-top:4rem;" data-aos="fade-up">
-                <h3 data-lang-key="solutions_get_secure_title">It's Not About "Get Rich Quick"—It's About "Get Secure Smartly."</h3>
-                <p data-lang-key="solutions_get_secure_p">This isn't about risky gambles. It's about understanding sound financial principles and accessing well-regulated international solutions that have served people for decades.</p>
+                <h3 data-lang-key="solutions_page_get_secure_title">It's Not About "Get Rich Quick"—It's About "Get Secure Smartly."</h3>
+                <p data-lang-key="solutions_page_get_secure_p">This isn't about risky gambles. It's about understanding sound financial principles and accessing well-regulated international solutions that have served people for decades.</p>
             </div>
 
             <div class="card" style="margin-top:4rem; text-align:center;" data-aos="fade-up">
-                <h3 data-lang-key="solutions_nextstep_title">Let's Talk About Your Blueprint</h3>
-                <p data-lang-key="solutions_nextstep_p">Ready to design your financial 'house'? Our upcoming free seminar and personal consultations will delve deeper into these solutions and how you can start building a more secure and prosperous future.</p>
-                <a href="seminars.html" class="btn btn-primary" style="margin-top: 1rem;" data-lang-key="solutions_nextstep_btn">Register for a Free Seminar</a>
+                <h3 data-lang-key="solutions_page_nextstep_title">Let's Talk About Your Blueprint</h3>
+                <p data-lang-key="solutions_page_nextstep_p">Ready to design your financial 'house'? Our upcoming free seminar and personal consultations will delve deeper into these solutions and how you can start building a more secure and prosperous future.</p>
+                <a href="seminars.html" class="btn btn-primary" style="margin-top: 1rem;" data-lang-key="solutions_page_nextstep_btn">Register for a Free Seminar</a>
             </div>
 
         </section>
@@ -133,7 +186,40 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            function checkVisitedPages() {
+                if (sessionStorage.getItem('visitedPension')) {
+                    document.getElementById('house-foundation').classList.add('completed');
+                }
+                if (sessionStorage.getItem('visitedInvesting')) {
+                    document.getElementById('house-walls').classList.add('completed');
+                }
+                if (sessionStorage.getItem('visitedInsurance')) {
+                    document.getElementById('house-roof').classList.add('completed');
+                }
+            }
+
+            document.querySelectorAll('.house-component a').forEach(link => {
+                link.addEventListener('click', () => {
+                    const href = link.getAttribute('href');
+                    if (href.includes('pension.html')) {
+                        sessionStorage.setItem('visitedPension', 'true');
+                    }
+                    if (href.includes('investing.html')) {
+                        sessionStorage.setItem('visitedInvesting', 'true');
+                    }
+                    if (href.includes('insurance.html')) {
+                        sessionStorage.setItem('visitedInsurance', 'true');
+                    }
+                });
+            });
+
+            checkVisitedPages();
+        });
+    </script>
     <script src="js/theme.js"></script>
     <script src="js/mobile-nav.js"></script>
     <script src="js/translations.js"></script>
