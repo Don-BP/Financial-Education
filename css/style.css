@@ -40,6 +40,12 @@ body {
     font-size: 17px;
     transition: background-color 0.3s, color 0.3s;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex-grow: 1;
 }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
@@ -48,6 +54,7 @@ h1 { font-size: 3rem; }
 h2 { font-size: 2.5rem; }
 h3 { font-size: 1.8rem; }
 h4 { font-size: 1.4rem; }
+hr { border: none; border-top: 1px solid var(--border-color); margin: 1.5rem 0; }
 
 /* --- Header & Navigation --- */
 header {
@@ -63,7 +70,7 @@ nav.container { display: flex; justify-content: space-between; align-items: cent
 
 /* Desktop Navigation & Dropdowns */
 .nav-links-desktop { list-style: none; display: flex; align-items: center; gap: 2.5rem; margin: 0; padding: 0; }
-.nav-links-desktop > li { padding: 10px 0; } /* Added padding to make hover area larger */
+.nav-links-desktop > li { padding: 10px 0; }
 .nav-links-desktop > li > a { text-decoration: none; color: var(--text-primary); font-weight: 600; transition: color 0.3s; }
 .nav-links-desktop > li > a:hover, .nav-links-desktop > li.active > a { color: var(--color-primary); }
 .nav-links-desktop > li.active > a { border-bottom: 2px solid var(--color-primary); padding-bottom: 5px; }
@@ -74,9 +81,9 @@ nav.container { display: flex; justify-content: space-between; align-items: cent
     display: none;
     position: absolute;
     left: 0;
-    top: calc(100% - 10px); /* Position it closer to the parent */
-    padding-top: 20px; /* Add padding to the top to create a "safe" hover zone */
-    background-color: transparent; /* Make the container transparent */
+    top: calc(100% - 10px); 
+    padding-top: 20px; 
+    background-color: transparent;
     border: none;
     z-index: 1001;
     min-width: 200px;
@@ -157,31 +164,16 @@ nav.container { display: flex; justify-content: space-between; align-items: cent
 .calculator-container { background-color: var(--bg-accent); padding: 2.5rem; border-radius: 12px; border: 1px solid var(--border-color); }
 .form-group { margin-bottom: 1.5rem; position: relative; }
 .form-group label { display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem; font-weight: 600; }
-.form-group input, .form-group select { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
-.tooltip { position: relative; display: inline-block; cursor: pointer; background-color: var(--color-secondary); color: #fff; width: 20px; height: 20px; border-radius: 50%; text-align: center; line-height: 20px; font-weight: 700; }
+.form-group input, .form-group select { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; box-sizing: border-box; background-color: var(--bg-secondary); color: var(--text-primary); }
+.tooltip { position: relative; display: inline-block; cursor: pointer; background-color: var(--color-secondary); color: var(--bg-secondary); width: 20px; height: 20px; border-radius: 50%; text-align: center; line-height: 20px; font-weight: 700; flex-shrink: 0;}
 .tooltip .tooltiptext { visibility: hidden; width: 250px; background-color: #333; color: #fff; text-align: left; border-radius: 6px; padding: 10px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -125px; opacity: 0; transition: opacity 0.3s; font-size: 0.9rem; font-weight: normal; }
 .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
 
-.results {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: var(--bg-primary);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    text-align: center;
-}
+.results { margin-top: 2rem; padding: 2rem; background-color: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; text-align: center; }
 .results h4 { margin-top: 0; }
-.result-value { font-size: 3rem; font-weight: 700; color: var(--color-primary); }
-.results .two-col-layout, .results .results-explanation {
-    padding: 0;
-    margin-bottom: 1.5rem;
-    background-color: transparent;
-    border: none;
-}
-.results .results-explanation {
-    margin-top: 1.5rem;
-    text-align: left;
-}
+.result-value { font-size: 3rem; font-weight: 700; color: var(--color-primary); margin: 1rem 0; }
+.results .two-col-layout, .results .results-explanation { padding: 0; margin-bottom: 0; background-color: transparent; border: none; }
+.results-explanation { margin-top: 1.5rem; text-align: left; background-color: var(--bg-accent); padding: 1.5rem; border-radius: 8px;}
 .results-explanation strong { color: var(--color-primary); }
 .results-comparison .final-value.winner { color: var(--color-success); }
 .results-comparison .final-value.loser { color: var(--color-accent); }
@@ -196,8 +188,16 @@ nav.container { display: flex; justify-content: space-between; align-items: cent
 .seminar-tag { display: inline-block; background-color: var(--color-secondary); color: #fff; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-left: 1rem; }
 
 /* --- Footer --- */
-footer { background-color: #1a202c; color: #f1faee; text-align: center; padding: 3rem 0; margin-top: 80px; }
+footer { background-color: #1a202c; color: #f1faee; text-align: center; padding: 3rem 0; margin-top: auto; }
 footer .disclaimer { max-width: 600px; margin: 1rem auto 0 auto; font-size: 0.8rem; opacity: 0.7; }
+
+/* --- Build Your House page styles --- */
+.house-builder { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
+.house-component { border: 3px dashed var(--color-secondary); padding: 2rem; width: 100%; max-width: 600px; text-align: center; background-color: var(--bg-accent); border-radius: 12px; opacity: 0.5; transition: opacity 0.5s, border-style 0.5s, border-color 0.5s; }
+.house-component.completed { border-style: solid; border-color: var(--color-success); opacity: 1; }
+.house-component h3 { margin-top: 0; }
+.house-component a { margin-top: 1rem; }
+
 
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
@@ -208,15 +208,10 @@ footer .disclaimer { max-width: 600px; margin: 1rem auto 0 auto; font-size: 0.8r
     .nav-links-desktop { display: none; }
     .header-controls .btn-primary { display: none; }
     .hamburger-menu { display: block; font-size: 2rem; background: none; border: none; color: var(--text-primary); cursor: pointer; }
-    .nav-links-mobile { display: flex; flex-direction: column; gap: 1.5rem; align-items: center; background-color: var(--bg-secondary); position: absolute; top: 100%; left: 0; width: 100%; padding: 2rem; box-shadow: 0 4px 6px var(--shadow-color); transform: translateY(-150%); transition: transform 0.3s ease-in-out; z-index: 999; box-sizing: border-box; }
+    .nav-links-mobile { display: flex; flex-direction: column; gap: 0.75rem; /* Reduced gap */ align-items: center; background-color: var(--bg-secondary); position: absolute; top: 100%; left: 0; width: 100%; padding: 2rem; box-shadow: 0 4px 6px var(--shadow-color); transform: translateY(-150%); transition: transform 0.3s ease-in-out; z-index: 999; box-sizing: border-box; }
     .nav-links-mobile.active { transform: translateY(0); }
     .nav-links-mobile a { font-size: 1.2rem; font-weight: bold; color: var(--text-primary); text-decoration: none; padding: 0.5rem 0; }
-    .nav-links-mobile .btn {
-        width: 100%;
-        box-sizing: border-box;
-        display: block;
-        text-align: center;
-    }
+    .nav-links-mobile .btn { width: 100%; box-sizing: border-box; display: block; text-align: center; }
 }
 
 @media (max-width: 768px) {
@@ -224,11 +219,44 @@ footer .disclaimer { max-width: 600px; margin: 1rem auto 0 auto; font-size: 0.8r
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
     .hero h1 { font-size: 2.8rem; }
-    .container { padding: 0 20px; }
-    .content-section, .calculator-wrapper, .card, .reality-check, .calculator-container, footer .container { padding-left: 20px; padding-right: 20px; }
-    .results { padding-left: 20px; padding-right: 20px; }
-    .results.results-comparison > .two-col-layout { padding: 0; }
-    .content-section { padding-top: 60px; padding-bottom: 60px; }
-    .two-col-layout, .card-grid { grid-template-columns: 1fr; }
-    .seminar-card { flex-direction: column; text-align: center; gap: 1.5rem; }
+    .container { padding: 0 15px; }
+
+    /* Flatten containers for mobile */
+    .card, .reality-check, .calculator-container {
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        margin-bottom: 2rem;
+        border-radius: 0;
+    }
+    .card {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .card:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    /* ADDED: Specific padding for index page cards on mobile */
+    .index-cards .card {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .content-section { padding: 40px 0; }
+    .calculator-wrapper {
+        padding: 40px 0;
+        border-top: none;
+        background: var(--bg-accent);
+    }
+    .calculator-container { padding: 1rem; }
+    .two-col-layout, .card-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .two-col-layout .image-content { order: -1; margin-bottom: 1rem; }
+
+    .seminar-card { flex-direction: column; text-align: center; gap: 1.5rem; border-left: none; border-top: 4px solid var(--color-primary); padding: 1.5rem; }
+    .results { padding: 1rem 0; background: transparent; border: none;}
+    .results .results-explanation { padding: 1rem; }
+
 }

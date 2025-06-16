@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Power of Compound Interest | Financial Freedom in Japan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script>(function(){const theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.classList.add('dark-mode');}})();</script>
 </head>
@@ -168,8 +172,20 @@
                         <p class="result-value" id="compound-amount">¥0</p>
                         <canvas id="compound-pie-chart" style="margin: 1.5rem 0;"></canvas>
                         <hr>
-                        <p>Total Contributions: <strong id="total-contributions">¥0</strong></p>
-                        <p>Total Interest Earned: <strong id="total-interest" style="color: var(--color-success);">¥0</strong></p>
+                        <div class="two-col-layout" style="text-align: left; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div>
+                                <p>What You Paid In:</p>
+                                <p><strong>¥${totalContributions.toLocaleString()}</strong></p>
+                            </div>
+                            <div>
+                                <p>What Your Money Earned:</p>
+                                <p><strong style="color: var(--color-success);">¥${totalInterest.toLocaleString('ja-JP', { maximumFractionDigits: 0 })}</strong></p>
+                            </div>
+                        </div>
+                        <div class="results-explanation">
+                            <h4 style="text-align:center;">What This Means For You</h4>
+                            <p>This demonstrates the power of compounding. Notice how the 'What Your Money Earned' amount can grow to be a huge portion of your final wealth. Over long periods, the growth from compounding can vastly exceed your own contributions. This is the fundamental difference between simply saving and actively building wealth.</p>
+                        </div>
                     </div>
                 </div>
             </div>

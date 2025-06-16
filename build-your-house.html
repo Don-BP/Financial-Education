@@ -9,32 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .house-builder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-        .house-component {
-            border: 3px dashed var(--color-secondary);
-            padding: 2rem;
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-            background-color: var(--bg-accent);
-            border-radius: 12px;
-            opacity: 0.5;
-            transition: opacity 0.5s, border-style 0.5s, border-color 0.5s;
-        }
-        .house-component.completed {
-            border-style: solid;
-            border-color: var(--color-success);
-            opacity: 1;
-        }
-        .house-component h3 { margin-top: 0; }
-        .house-component a { margin-top: 1rem; }
-    </style>
+
     <script>
         (function() {
             const theme = localStorage.getItem('theme');
@@ -157,28 +132,17 @@
                 }
             }
 
-            function markPageAsVisited() {
-                const path = window.location.pathname.split("/").pop();
-                if (path.includes('pension.html') || path.includes('retirement-calculator.html')) {
-                    sessionStorage.setItem('visitedPension', 'true');
-                }
-                if (path.includes('investing.html')) {
-                    sessionStorage.setItem('visitedInvesting', 'true');
-                }
-                if (path.includes('insurance.html')) {
-                    sessionStorage.setItem('visitedInsurance', 'true');
-                }
-            }
-            
+            // Set flags when links are clicked
             document.querySelectorAll('.house-component a').forEach(link => {
                 link.addEventListener('click', () => {
-                    if (link.href.includes('pension') || link.href.includes('retirement-calculator')) {
+                    const href = link.getAttribute('href');
+                    if (href.includes('pension')) {
                         sessionStorage.setItem('visitedPension', 'true');
                     }
-                     if (link.href.includes('investing')) {
+                    if (href.includes('investing')) {
                         sessionStorage.setItem('visitedInvesting', 'true');
                     }
-                     if (link.href.includes('insurance')) {
+                    if (href.includes('insurance')) {
                         sessionStorage.setItem('visitedInsurance', 'true');
                     }
                 });
