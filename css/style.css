@@ -132,7 +132,7 @@ nav.container { display: flex; justify-content: space-between; align-items: cent
     background: none; border: none; cursor: pointer; font-size: 1.5rem;
     color: var(--text-secondary); transition: color 0.3s, transform 0.3s; padding: 0;
 }
-.theme-switcher:hover, #language-switcher:hover { color: var(--color-primary); transform: rotate(15deg); }
+.theme-switcher:hover, #language-switcher:hover { color: var(--color-primary); transform: scale(1.1) rotate(15deg); }
 #language-switcher { font-size: 1rem; font-weight: 600; font-family: 'Poppins', sans-serif; transform-origin: center; padding: 5px 8px; border: 1px solid var(--border-color); border-radius: 6px; }
 
 /* --- Buttons --- */
@@ -153,6 +153,9 @@ html.dark-mode .btn-secondary {
 .hero { background: linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)), url('../images/hero-background.jpg'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 120px 20px; }
 .hero h1 { font-size: 3.8rem; margin-bottom: 1rem; color: #fff; }
 .hero .subtitle { font-size: 1.3rem; max-width: 750px; margin: 0 auto 2.5rem auto; opacity: 0.9; }
+.hero .hero-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+/* REMOVED the conflicting .hero .btn-secondary rule that made the background transparent */
+
 
 /* --- Content & Card Sections --- */
 .content-section { padding: 80px 0; }
@@ -206,12 +209,49 @@ html.dark-mode .btn-secondary {
 footer { background-color: #1a202c; color: #f1faee; text-align: center; padding: 3rem 0; margin-top: auto; }
 footer .disclaimer { max-width: 600px; margin: 1rem auto 0 auto; font-size: 0.8rem; opacity: 0.7; }
 
-/* --- Build Your House page styles --- */
-.house-builder { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
-.house-component { border: 3px dashed var(--color-secondary); padding: 2rem; width: 100%; max-width: 600px; text-align: center; background-color: var(--bg-accent); border-radius: 12px; opacity: 0.5; transition: opacity 0.5s, border-style 0.5s, border-color 0.5s; }
-.house-component.completed { border-style: solid; border-color: var(--color-success); opacity: 1; }
-.house-component h3 { margin-top: 0; }
-.house-component a { margin-top: 1rem; }
+/* --- Seminar CTA Block --- */
+.seminar-cta-block {
+    text-align: center;
+    background-color: var(--bg-accent);
+    padding: 3rem 2rem;
+    margin: 4rem 0 2rem 0;
+    border-radius: 12px;
+}
+.seminar-cta-block h3 {
+    margin-top: 0;
+}
+.seminar-cta-block p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+/* --- Testimonials --- */
+.testimonials-section {
+    padding-top: 4rem;
+}
+.testimonial-card {
+    background-color: var(--bg-accent);
+    padding: 2rem;
+    border-left: 5px solid var(--color-success);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+.testimonial-card p {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.testimonial-card footer {
+    background: none;
+    margin-top: 1rem;
+    padding: 0;
+    font-weight: 700;
+    text-align: right;
+    color: var(--text-secondary);
+}
 
 /* --- Health Check Page --- */
 .health-check-item { margin-bottom: 1.5rem; }
@@ -223,26 +263,6 @@ footer .disclaimer { max-width: 600px; margin: 1rem auto 0 auto; font-size: 0.8r
 .health-check-results ul { list-style-type: '➡️'; padding-left: 25px; }
 .health-check-results li { padding-left: 10px; }
 
-/* --- Action Plan Styling --- */
-.action-hierarchy { list-style-type: none; padding-left: 0; counter-reset: step-counter; }
-.action-hierarchy li { counter-increment: step-counter; margin-bottom: 1.5rem; padding-left: 50px; position: relative; }
-.action-hierarchy li::before {
-    content: counter(step-counter);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 35px;
-    height: 35px;
-    background-color: var(--color-secondary);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-}
-
 
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
@@ -250,22 +270,23 @@ footer .disclaimer { max-width: 600px; margin: 1rem auto 0 auto; font-size: 0.8r
 }
 
 @media (max-width: 992px) {
-    .nav-links-desktop { display: none; }
-    .header-controls .btn-primary { display: none; }
+    .nav-links-desktop,
+    .header-controls .btn-primary { 
+        display: none; 
+    }
     .hamburger-menu { display: block; font-size: 2rem; background: none; border: none; color: var(--text-primary); cursor: pointer; }
     
-    /* UPDATED: Reduced gap and padding for tighter mobile menu */
     .nav-links-mobile { 
         display: flex; 
         flex-direction: column; 
-        gap: 0.3rem; /* Reduced gap */
+        gap: 0.3rem;
         align-items: center; 
         background-color: var(--bg-secondary); 
         position: absolute; 
         top: 100%; 
         left: 0; 
         width: 100%; 
-        padding: 1rem 2rem; /* Reduced top/bottom padding */
+        padding: 1rem 2rem 1.5rem 2rem;
         box-shadow: 0 4px 6px var(--shadow-color); 
         transform: translateY(-150%); 
         transition: transform 0.3s ease-in-out; 
@@ -278,7 +299,7 @@ footer .disclaimer { max-width: 600px; margin: 1rem auto 0 auto; font-size: 0.8r
         font-weight: bold; 
         color: var(--text-primary); 
         text-decoration: none; 
-        padding: 0.3rem 0; /* Reduced vertical padding */
+        padding: 0.3rem 0;
     }
     .nav-links-mobile .btn { 
         width: 100%; 
@@ -286,14 +307,6 @@ footer .disclaimer { max-width: 600px; margin: 1rem auto 0 auto; font-size: 0.8r
         display: block; 
         text-align: center; 
         margin-top: 0.5rem;
-    }
-    
-    /* UPDATED: Vertical Language Switcher */
-    #language-switcher {
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        padding: 8px 4px;
-        letter-spacing: 0.1em;
     }
 }
 

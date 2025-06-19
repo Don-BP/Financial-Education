@@ -20,6 +20,7 @@
     </script>
 </head>
 <body>
+    <!-- Paste the Universal Corrected <header> block here -->
     <header>
         <nav class="container">
             <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
@@ -50,6 +51,7 @@
                         <a href="#" data-lang-key="nav_resources">Resources</a>
                         <div class="dropdown-menu">
                             <ul>
+                                <li><a href="about.html" data-lang-key="nav_about">About Us</a></li>
                                 <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
                                 <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
                                 <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
@@ -66,52 +68,38 @@
             </div>
         </nav>
         <div class="nav-links-mobile" id="nav-links-mobile">
-            <a href="pension.html" data-lang-key="nav_pension">Pension</a>
+             <a href="pension.html" data-lang-key="nav_pension">Pension</a>
             <a href="insurance.html" data-lang-key="nav_insurance">Insurance</a>
             <a href="investing.html" data-lang-key="nav_investing">Investing</a>
             <a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a>
             <a href="health-check.html" data-lang-key="nav_health_check">Health Check</a>
             <a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a>
             <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
+            <a href="about.html" data-lang-key="nav_about">About Us</a>
             <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
             <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
             <a href="resources.html" data-lang-key="nav_resources">Resources</a>
             <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
         </div>
     </header>
-
     <script>
-        // This script will automatically set the active state on the navigation
         document.addEventListener('DOMContentLoaded', () => {
             const pageMap = {
-                'pension.html': 'learn',
-                'insurance.html': 'learn',
-                'investing.html': 'learn',
-                'foreigners.html': 'learn',
-                'health-check.html': 'plan',
-                'solutions.html': 'plan',
-                'retirement-calculator.html': 'plan',
-                'casestudies.html': 'resources',
-                'glossary.html': 'resources',
-                'resources.html': 'resources'
+                'pension.html': 'learn', 'insurance.html': 'learn', 'investing.html': 'learn', 'foreigners.html': 'learn',
+                'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
+                'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
             };
             const currentPage = window.location.pathname.split('/').pop();
             const activeCategory = pageMap[currentPage];
-
             if (activeCategory) {
-                const navItem = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
-                if (navItem) {
-                    navItem.classList.add('active');
-                }
+                document.querySelector(`li[data-nav-category="${activeCategory}"]`).classList.add('active');
             }
-            
             const activeLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
             if(activeLink) {
                 activeLink.classList.add('active');
             }
         });
     </script>
-
     <main class="container">
         <section class="content-section">
             <h2 class="section-title" data-aos="fade-up" data-lang-key="pension_title">The Reality of Japan's Pension System</h2>
@@ -203,8 +191,14 @@
                     <li data-lang-key="pension_nextsteps_li1">✅ Find your most recent `Nenkin Teikibin` (pension statement).</li>
                     <li data-lang-key="pension_nextsteps_li2">✅ Register for `Nenkin Net` online to see your exact, up-to-date record.</li>
                     <li data-lang-key="pension_nextsteps_li3">✅ Use our <a href="retirement-calculator.html">Retirement Calculator</a> to determine your retirement "gap."</li>
-                    <li data-lang-key="pension_nextsteps_li4">✅ Discover how to bridge that gap by learning about <a href="build-your-house.html">smarter solutions</a>.</li>
+                    <li data-lang-key="pension_nextsteps_li4">✅ Discover how to bridge that gap by learning about <a href="solutions.html">smarter solutions</a>.</li>
                 </ul>
+            </div>
+
+            <div class="seminar-cta-block" data-aos="fade-up">
+                <h3 data-lang-key="cta_title">Ready to Turn Knowledge Into Action?</h3>
+                <p data-lang-key="cta_p">These topics can be overwhelming, but you don't have to figure it out alone. Our free seminar breaks down these problems with clarity and gives you concrete steps to take control of your financial situation.</p>
+                <a href="seminars.html" class="btn btn-primary" data-lang-key="cta_btn">Secure Your Spot in the Next Free Seminar</a>
             </div>
         </section>
     </main>

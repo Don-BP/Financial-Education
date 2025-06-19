@@ -12,6 +12,7 @@
     <script>(function(){const theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.classList.add('dark-mode');}})();</script>
 </head>
 <body>
+    <!-- Paste the Universal Corrected <header> block here -->
     <header>
         <nav class="container">
             <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
@@ -42,6 +43,7 @@
                         <a href="#" data-lang-key="nav_resources">Resources</a>
                         <div class="dropdown-menu">
                             <ul>
+                                <li><a href="about.html" data-lang-key="nav_about">About Us</a></li>
                                 <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
                                 <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
                                 <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
@@ -58,52 +60,38 @@
             </div>
         </nav>
         <div class="nav-links-mobile" id="nav-links-mobile">
-            <a href="pension.html" data-lang-key="nav_pension">Pension</a>
+             <a href="pension.html" data-lang-key="nav_pension">Pension</a>
             <a href="insurance.html" data-lang-key="nav_insurance">Insurance</a>
             <a href="investing.html" data-lang-key="nav_investing">Investing</a>
             <a href="foreigners.html" data-lang-key="nav_foreigners">For Foreigners</a>
             <a href="health-check.html" data-lang-key="nav_health_check">Health Check</a>
             <a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a>
             <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
+            <a href="about.html" data-lang-key="nav_about">About Us</a>
             <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
             <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
             <a href="resources.html" data-lang-key="nav_resources">Resources</a>
             <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
         </div>
     </header>
-
     <script>
-        // This script will automatically set the active state on the navigation
         document.addEventListener('DOMContentLoaded', () => {
             const pageMap = {
-                'pension.html': 'learn',
-                'insurance.html': 'learn',
-                'investing.html': 'learn',
-                'foreigners.html': 'learn',
-                'health-check.html': 'plan',
-                'solutions.html': 'plan',
-                'retirement-calculator.html': 'plan',
-                'casestudies.html': 'resources',
-                'glossary.html': 'resources',
-                'resources.html': 'resources'
+                'pension.html': 'learn', 'insurance.html': 'learn', 'investing.html': 'learn', 'foreigners.html': 'learn',
+                'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
+                'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
             };
             const currentPage = window.location.pathname.split('/').pop();
             const activeCategory = pageMap[currentPage];
-
             if (activeCategory) {
-                const navItem = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
-                if (navItem) {
-                    navItem.classList.add('active');
-                }
+                document.querySelector(`li[data-nav-category="${activeCategory}"]`).classList.add('active');
             }
-            
             const activeLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
             if(activeLink) {
                 activeLink.classList.add('active');
             }
         });
     </script>
-
     <main class="container">
         <section class="content-section">
             <h2 class="section-title" data-aos="fade-up" data-lang-key="investing_section1_title">The Most Powerful Force in Finance: Compound Interest (複利)</h2>
@@ -156,7 +144,7 @@
                 <p class="question" data-lang-key="investing_reality_q">Reality Check: See the staggering difference a 10-year delay makes. Both scenarios assume investing ¥50,000/month at a 6% annual return, aiming for retirement at age 65.</p>
                 <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; justify-content: center;">
                     <button class="btn btn-primary" id="start-25" style="background-color: var(--color-success);" data-lang-key="investing_reality_btn1">Start at Age 25</button>
-                    <button class="btn btn-primary" id="start-35" style="background-color: var(--color-secondary);" data-lang-key="investing_reality_btn2">Start at Age 35</button>
+                    <button class="btn btn-secondary" id="start-35" data-lang-key="investing_reality_btn2">Start at Age 35</button>
                 </div>
                 <div class="reality-answer" id="wait-answer">
                     <h4>Final Value at Age 65: <strong id="wait-result" style="font-size: 1.5rem;">¥0</strong></h4>
@@ -204,23 +192,7 @@
                     <button id="calculate-compound-btn" class="btn btn-primary" style="width: 100%;" data-lang-key="investing_calc_btn">See the Magic</button>
                     
                     <div class="results" id="compound-results" style="display:none;">
-                        <h4>Future Value After <span id="years-text"></span> Years:</h4>
-                        <p class="result-value" id="compound-amount">¥0</p>
-                        <canvas id="compound-pie-chart" style="margin: 1.5rem 0;"></canvas>
-                        <hr>
-                        <div class="two-col-layout" style="text-align: left; gap: 1rem; margin-bottom: 1.5rem;">
-                            <div>
-                                <p>What You Paid In:</p>
-                                <p><strong id="total-contributions">¥0</strong></p>
-                            </div>
-                            <div>
-                                <p>What Your Money Earned:</p>
-                                <p><strong id="total-interest" style="color: var(--color-success);">¥0</strong></p>
-                            </div>
-                        </div>
-                        <div class="results-explanation">
-                            <!-- JS will populate this -->
-                        </div>
+                        <!-- Results injected by compound-calculator.js -->
                     </div>
                 </div>
             </div>
@@ -231,10 +203,16 @@
                <h3 data-lang-key="investing_nextsteps_title">Your Next Steps</h3>
                <ul>
                    <li data-lang-key="investing_nextsteps_li1">✅ Acknowledge that time is your most valuable asset.</li>
-                   <li data-lang-key="investing_nextsteps_li2">✅ Learn about strategies to harness compounding on our <a href="build-your-house.html">planning page</a>.</li>
+                   <li data-lang-key="investing_nextsteps_li2">✅ Learn about strategies to harness compounding on our <a href="solutions.html">Smarter Solutions page</a>.</li>
                    <li data-lang-key="investing_nextsteps_li3">✅ Break the inertia and take the first step by attending our <a href="seminars.html">free seminar</a>.</li>
                </ul>
            </div>
+           
+            <div class="seminar-cta-block" data-aos="fade-up">
+                <h3 data-lang-key="cta_title">Ready to Turn Knowledge Into Action?</h3>
+                <p data-lang-key="cta_p">These topics can be overwhelming, but you don't have to figure it out alone. Our free seminar breaks down these problems with clarity and gives you concrete steps to take control of your financial situation.</p>
+                <a href="seminars.html" class="btn btn-primary" data-lang-key="cta_btn">Secure Your Spot in the Next Free Seminar</a>
+            </div>
        </section>
     </main>
 
