@@ -80,14 +80,27 @@
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
                 'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
             };
-            const currentPage = window.location.pathname.split('/').pop();
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            // Desktop Category Highlighting
             const activeCategory = pageMap[currentPage];
             if (activeCategory) {
-                document.querySelector(`li[data-nav-category="${activeCategory}"]`).classList.add('active');
+                const desktopCategory = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
+                if (desktopCategory) {
+                    desktopCategory.classList.add('active');
+                }
             }
-            const activeLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
-            if(activeLink) {
-                activeLink.classList.add('active');
+            
+            // Desktop Dropdown Link Highlighting
+            const desktopLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
+            if(desktopLink) {
+                desktopLink.classList.add('active');
+            }
+
+            // Mobile Nav Link Highlighting
+            const mobileLink = document.querySelector(`.nav-links-mobile a[href="${currentPage}"]`);
+            if(mobileLink) {
+                mobileLink.classList.add('active');
             }
         });
     </script>

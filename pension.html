@@ -20,7 +20,6 @@
     </script>
 </head>
 <body>
-    <!-- Paste the Universal Corrected <header> block here -->
     <header>
         <nav class="container">
             <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
@@ -89,14 +88,27 @@
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
                 'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
             };
-            const currentPage = window.location.pathname.split('/').pop();
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            // Desktop Category Highlighting
             const activeCategory = pageMap[currentPage];
             if (activeCategory) {
-                document.querySelector(`li[data-nav-category="${activeCategory}"]`).classList.add('active');
+                const desktopCategory = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
+                if (desktopCategory) {
+                    desktopCategory.classList.add('active');
+                }
             }
-            const activeLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
-            if(activeLink) {
-                activeLink.classList.add('active');
+            
+            // Desktop Dropdown Link Highlighting
+            const desktopLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
+            if(desktopLink) {
+                desktopLink.classList.add('active');
+            }
+
+            // Mobile Nav Link Highlighting
+            const mobileLink = document.querySelector(`.nav-links-mobile a[href="${currentPage}"]`);
+            if(mobileLink) {
+                mobileLink.classList.add('active');
             }
         });
     </script>
@@ -138,10 +150,10 @@
                 <p style="text-align: center; max-width: 800px; margin: -2rem auto 2rem auto;" data-lang-key="pension_calc_subtitle">Use this tool to get a rough idea of what your pension might look like. This helps visualize the potential gap you need to fill.</p>
                 <div class="calculator-container" id="pension-calculator">
                     <div class="form-group">
-                        <label for="pension-type" data-lang-key="pension_calc_label1">
-                            Your Employment Status
+                        <label for="pension-type">
+                            <span data-lang-key="pension_calc_label1">Your Employment Status</span>
                             <div class="tooltip">?
-                                <span class="tooltiptext">Choose 'Company Employee' if you are enrolled in Shakai Hoken (社会保険). Choose 'Self-Employed' if you pay into Kokumin Nenkin (国民年金) yourself.</span>
+                                <span class="tooltiptext" data-lang-key="pension_calc_tooltip1">Choose 'Company Employee' if you are enrolled in Shakai Hoken (社会保険). Choose 'Self-Employed' if you pay into Kokumin Nenkin (国民年金) yourself.</span>
                             </div>
                         </label>
                         <select id="pension-type">
@@ -150,19 +162,19 @@
                         </select>
                     </div>
                     <div class="form-group kosei-only">
-                        <label for="avg-income" data-lang-key="pension_calc_label2">
-                            Average Annual Income During Enrollment (JPY)
+                        <label for="avg-income">
+                            <span data-lang-key="pension_calc_label2">Average Annual Income During Enrollment (JPY)</span>
                             <div class="tooltip">?
-                                <span class="tooltiptext">Your Kosei Nenkin is based on your average salary while you were enrolled. Use your best estimate. A higher average leads to a higher pension.</span>
+                                <span class="tooltiptext" data-lang-key="pension_calc_tooltip2">Your Kosei Nenkin is based on your average salary while you were enrolled. Use your best estimate. A higher average leads to a higher pension.</span>
                             </div>
                         </label>
                         <input type="number" id="avg-income" placeholder="e.g., 5000000">
                     </div>
                     <div class="form-group">
-                        <label for="contribution-years" data-lang-key="pension_calc_label3">
-                            Total Years Contributing to Japanese Pension
+                        <label for="contribution-years">
+                            <span data-lang-key="pension_calc_label3">Total Years Contributing to Japanese Pension</span>
                              <div class="tooltip">?
-                                <span class="tooltiptext">Enter the total number of years you have paid or expect to pay into the system (max 40 years for calculation).</span>
+                                <span class="tooltiptext" data-lang-key="pension_calc_tooltip3">Enter the total number of years you have paid or expect to pay into the system (max 40 years for calculation).</span>
                             </div>
                         </label>
                         <input type="number" id="contribution-years" placeholder="e.g., 25" max="40">

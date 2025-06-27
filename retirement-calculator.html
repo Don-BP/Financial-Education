@@ -89,19 +89,27 @@
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
                 'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
             };
-            const currentPage = window.location.pathname.split('/').pop();
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            // Desktop Category Highlighting
             const activeCategory = pageMap[currentPage];
-
             if (activeCategory) {
-                const navItem = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
-                if (navItem) {
-                    navItem.classList.add('active');
+                const desktopCategory = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
+                if (desktopCategory) {
+                    desktopCategory.classList.add('active');
                 }
             }
             
-            const activeLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
-            if(activeLink) {
-                activeLink.classList.add('active');
+            // Desktop Dropdown Link Highlighting
+            const desktopLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
+            if(desktopLink) {
+                desktopLink.classList.add('active');
+            }
+
+            // Mobile Nav Link Highlighting
+            const mobileLink = document.querySelector(`.nav-links-mobile a[href="${currentPage}"]`);
+            if(mobileLink) {
+                mobileLink.classList.add('active');
             }
         });
     </script>
@@ -113,28 +121,28 @@
 
             <div class="calculator-container" data-aos="fade-up">
                 <div class="form-group">
-                    <label for="desired-income" data-lang-key="retirement_calc_label1">
-                        1. Desired Monthly Income in Retirement (JPY)
+                    <label for="desired-income">
+                        <span data-lang-key="retirement_calc_label1">1. Desired Monthly Income in Retirement (JPY)</span>
                         <div class="tooltip">?
-                            <span class="tooltiptext">How much money do you want to live on each month after you stop working? A common goal is between ¥250,000 and ¥350,000.</span>
+                            <span class="tooltiptext" data-lang-key="retirement_calc_tooltip1">How much money do you want to live on each month after you stop working? A common goal is between ¥250,000 and ¥350,000.</span>
                         </div>
                     </label>
                     <input type="number" id="desired-income" placeholder="e.g., 300000">
                 </div>
                 <div class="form-group">
-                    <label for="pension-income" data-lang-key="retirement_calc_label2">
-                        2. Estimated Monthly Pension Income (JPY)
+                    <label for="pension-income">
+                        <span data-lang-key="retirement_calc_label2">2. Estimated Monthly Pension Income (JPY)</span>
                         <div class="tooltip">?
-                            <span class="tooltiptext">Enter your estimated monthly pension from our Pension Calculator or your official Nenkin Net statement.</span>
+                            <span class="tooltiptext" data-lang-key="retirement_calc_tooltip2">Enter your estimated monthly pension from our Pension Calculator or your official Nenkin Net statement.</span>
                         </div>
                     </label>
                     <input type="number" id="pension-income" placeholder="e.g., 150000">
                 </div>
                 <div class="form-group">
-                    <label for="retirement-years" data-lang-key="retirement_calc_label3">
-                        3. How many years will you be in retirement?
+                    <label for="retirement-years">
+                        <span data-lang-key="retirement_calc_label3">3. How many years will you be in retirement?</span>
                         <div class="tooltip">?
-                            <span class="tooltiptext">A common estimate is 20-30 years. For example, retiring at 65 and living to 90 is 25 years.</span>
+                            <span class="tooltiptext" data-lang-key="retirement_calc_tooltip3">A common estimate is 20-30 years. For example, retiring at 65 and living to 90 is 25 years.</span>
                         </div>
                     </label>
                     <input type="number" id="retirement-years" placeholder="e.g., 25">

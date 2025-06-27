@@ -37,7 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
         translatePage(lang);
 
         if (languageSwitcher) {
-            languageSwitcher.textContent = lang === 'en' ? '日本語' : 'English';
+            if (lang === 'en') {
+                languageSwitcher.innerHTML = '日本語';
+                languageSwitcher.setAttribute('aria-label', 'Switch language');
+            } else { // lang is 'ja'
+                languageSwitcher.innerHTML = 'E<br>n<br>g';
+                languageSwitcher.setAttribute('aria-label', '言語を切り替える');
+            }
         }
     };
     

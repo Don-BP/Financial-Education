@@ -81,19 +81,27 @@
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
                 'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
             };
-            const currentPage = window.location.pathname.split('/').pop();
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            // Desktop Category Highlighting
             const activeCategory = pageMap[currentPage];
-
             if (activeCategory) {
-                const navItem = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
-                if (navItem) {
-                    navItem.classList.add('active');
+                const desktopCategory = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
+                if (desktopCategory) {
+                    desktopCategory.classList.add('active');
                 }
             }
             
-            const activeLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
-            if(activeLink) {
-                activeLink.classList.add('active');
+            // Desktop Dropdown Link Highlighting
+            const desktopLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
+            if(desktopLink) {
+                desktopLink.classList.add('active');
+            }
+
+            // Mobile Nav Link Highlighting
+            const mobileLink = document.querySelector(`.nav-links-mobile a[href="${currentPage}"]`);
+            if(mobileLink) {
+                mobileLink.classList.add('active');
             }
         });
     </script>
@@ -196,7 +204,7 @@
                     q3: t.healthcheck_results_insurance || '<strong>Insurance:</strong> "Savings-type" insurance is often a high-fee, low-return trap. See if yours is worthwhile on our <a href="insurance.html">Insurance Page</a>.',
                     q4: t.healthcheck_results_compounding || '<strong>Compound Interest:</strong> This is the most important engine for building wealth. It is essential to understand this concept. Learn how it works on our <a href="investing.html">Investing Page</a>.',
                     q5: t.healthcheck_results_goal || "<strong>Retirement Goal:</strong> Without a target, you can't make a plan. Use our <a href='retirement-calculator.html'>Retirement Calculator</a> to find your number.",
-                    all_yes: t.healthcheck_results_congrats || "Congratulations, you seem to have a good handle on the basics! Explore our <a href='build-your-house.html'>Build Your Plan</a> page to take your planning to the next level."
+                    all_yes: t.healthcheck_results_congrats || "Congratulations, you seem to have a good handle on the basics! Explore our <a href='solutions.html'>Smarter Solutions page</a> to take your planning to the next level."
                 };
 
                 let needsRecommendations = false;

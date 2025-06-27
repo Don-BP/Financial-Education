@@ -12,7 +12,6 @@
     <script>(function(){const theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.classList.add('dark-mode');}})();</script>
 </head>
 <body>
-    <!-- Paste the Universal Corrected <header> block here -->
     <header>
         <nav class="container">
             <a href="index.html" class="logo" data-lang-key="logo_text">Financial Freedom</a>
@@ -81,14 +80,27 @@
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
                 'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
             };
-            const currentPage = window.location.pathname.split('/').pop();
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            // Desktop Category Highlighting
             const activeCategory = pageMap[currentPage];
             if (activeCategory) {
-                document.querySelector(`li[data-nav-category="${activeCategory}"]`).classList.add('active');
+                const desktopCategory = document.querySelector(`li[data-nav-category="${activeCategory}"]`);
+                if (desktopCategory) {
+                    desktopCategory.classList.add('active');
+                }
             }
-            const activeLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
-            if(activeLink) {
-                activeLink.classList.add('active');
+            
+            // Desktop Dropdown Link Highlighting
+            const desktopLink = document.querySelector(`.dropdown-menu a[href="${currentPage}"]`);
+            if(desktopLink) {
+                desktopLink.classList.add('active');
+            }
+
+            // Mobile Nav Link Highlighting
+            const mobileLink = document.querySelector(`.nav-links-mobile a[href="${currentPage}"]`);
+            if(mobileLink) {
+                mobileLink.classList.add('active');
             }
         });
     </script>
@@ -138,33 +150,37 @@
                         <div class="calculator-side">
                             <h4 data-lang-key="insurance_calc_h4_1">1. Your "Savings" Insurance Policy</h4>
                             <div class="form-group">
-                                <label for="monthly-premium" data-lang-key="insurance_calc_label1">Monthly Premium (JPY)
+                                <label for="monthly-premium">
+                                    <span data-lang-key="insurance_calc_label1">Monthly Premium (JPY)</span>
                                     <div class="tooltip">?
-                                        <span class="tooltiptext">Enter the amount you pay for your savings-type insurance policy each month.</span>
+                                        <span class="tooltiptext" data-lang-key="insurance_calc_tooltip1">Enter the amount you pay for your savings-type insurance policy each month.</span>
                                     </div>
                                 </label>
                                 <input type="number" id="monthly-premium" placeholder="e.g., 30000">
                             </div>
                             <div class="form-group">
-                                <label for="policy-years" data-lang-key="insurance_calc_label2">Number of Years
+                                <label for="policy-years">
+                                    <span data-lang-key="insurance_calc_label2">Number of Years</span>
                                     <div class="tooltip">?
-                                        <span class="tooltiptext">Enter the total duration of your policy in years.</span>
+                                        <span class="tooltiptext" data-lang-key="insurance_calc_tooltip2">Enter the total duration of your policy in years.</span>
                                     </div>
                                 </label>
                                 <input type="number" id="policy-years" placeholder="e.g., 30">
                             </div>
                             <div class="form-group">
-                                <label for="cash-value" data-lang-key="insurance_calc_label3">Projected Cash Value if You LIVE (JPY)
+                                <label for="cash-value">
+                                    <span data-lang-key="insurance_calc_label3">Projected Cash Value if You LIVE (JPY)</span>
                                     <div class="tooltip">?
-                                        <span class="tooltiptext">Find the projected surrender value (解約返戻金) on your policy illustration for the end of the term.</span>
+                                        <span class="tooltiptext" data-lang-key="insurance_calc_tooltip3">Find the projected surrender value (解約返戻金) on your policy illustration for the end of the term.</span>
                                     </div>
                                 </label>
                                 <input type="number" id="cash-value" placeholder="e.g., 11750000">
                             </div>
                              <div class="form-group">
-                                <label for="death-benefit" data-lang-key="insurance_calc_label4">Death Benefit if You DIE (JPY)
+                                <label for="death-benefit">
+                                    <span data-lang-key="insurance_calc_label4">Death Benefit if You DIE (JPY)</span>
                                     <div class="tooltip">?
-                                        <span class="tooltiptext">Enter the death benefit (死亡保険金) amount from your policy document.</span>
+                                        <span class="tooltiptext" data-lang-key="insurance_calc_tooltip4">Enter the death benefit (死亡保険金) amount from your policy document.</span>
                                     </div>
                                 </label>
                                 <input type="number" id="death-benefit" placeholder="e.g., 15000000">
@@ -174,17 +190,18 @@
                         <div class="calculator-side">
                             <h4 data-lang-key="insurance_calc_h4_2">2. A Smarter Investment Plan</h4>
                             <div class="form-group">
-                                <label for="invest-premium" data-lang-key="insurance_calc_label5">Monthly Investment (JPY)</label>
+                                <label for="invest-premium"><span data-lang-key="insurance_calc_label5">Monthly Investment (JPY)</span></label>
                                 <input type="number" id="invest-premium" disabled>
                             </div>
                             <div class="form-group">
-                                <label for="invest-years" data-lang-key="insurance_calc_label6">Number of Years</label>
+                                <label for="invest-years"><span data-lang-key="insurance_calc_label6">Number of Years</span></label>
                                 <input type="number" id="invest-years" disabled>
                             </div>
                             <div class="form-group">
-                                <label for="annual-return" data-lang-key="insurance_calc_label7">Assumed Annual Return (%)
+                                <label for="annual-return">
+                                    <span data-lang-key="insurance_calc_label7">Assumed Annual Return (%)</span>
                                     <div class="tooltip">?
-                                        <span class="tooltiptext">A modest, long-term average return for a diversified global portfolio is often estimated between 5-8%. We use 6% as a conservative example.</span>
+                                        <span class="tooltiptext" data-lang-key="insurance_calc_tooltip5">A modest, long-term average return for a diversified global portfolio is often estimated between 5-8%. We use 6% as a conservative example.</span>
                                     </div>
                                 </label>
                                 <input type="number" id="annual-return" value="6">
