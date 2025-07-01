@@ -51,9 +51,7 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a href="about.html" data-lang-key="nav_about">About Us</a></li>
-                                <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
                                 <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
-                                <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
                             </ul>
                         </div>
                     </li>
@@ -75,9 +73,7 @@
             <a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a>
             <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
             <a href="about.html" data-lang-key="nav_about">About Us</a>
-            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
             <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
-            <a href="resources.html" data-lang-key="nav_resources">Resources</a>
             <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
         </div>
     </header>
@@ -87,7 +83,7 @@
             const pageMap = {
                 'pension.html': 'learn', 'insurance.html': 'learn', 'investing.html': 'learn', 'foreigners.html': 'learn',
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
-                'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
+                'about.html': 'resources', 'glossary.html': 'resources'
             };
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             
@@ -118,6 +114,24 @@
         <section class="content-section">
             <h2 class="section-title" data-aos="fade-up" data-lang-key="retirement_calc_page_title">"What's My Number?" Retirement Calculator</h2>
             <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="retirement_calc_subtitle">Find out the total amount you need to save to live the retirement you want. This gives you a clear, powerful goal to aim for.</p>
+
+            <section class="content-section" style="padding-top:0; padding-bottom: 4rem;">
+                <h3 class="section-title" style="font-size:2rem; margin-bottom: 2rem;" data-aos="fade-up" data-lang-key="retirement_pain_title">The Retirement Gap: Common Fears, Real Possibilities</h3>
+                <div class="card-grid">
+                    <div class="card" data-aos="fade-up" data-aos-delay="100">
+                        <h4 data-lang-key="retirement_pain1_title">The Fear of Outliving Your Savings</h4>
+                        <p data-lang-key="retirement_pain1_text">Your retirement could last 25 years or more. A lump sum that seems large today can be quickly depleted by daily expenses and rising inflation, leaving you to survive on a minimal pension. The goal isn't just to retire, but to stay retired with peace of mind.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+                        <h4 data-lang-key="retirement_pain2_title">The "Working Forever" Plan</h4>
+                        <p data-lang-key="retirement_pain2_text">Without a sufficient nest egg, many people find themselves forced to work part-time jobs well into their 70s—not for enjoyment, but for survival. True financial freedom means working becomes a choice, not a necessity.</p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="300">
+                        <h4 data-lang-key="retirement_pain3_title">Inflation: The Silent Killer</h4>
+                        <p data-lang-key="retirement_pain3_text">Your pension payments are unlikely to keep pace with the real cost of living. Over two decades, even modest inflation can dramatically reduce your purchasing power, turning a comfortable plan into a tight budget. Your plan must account for this silent erosion of wealth.</p>
+                    </div>
+                </div>
+            </section>
 
             <div class="calculator-container" data-aos="fade-up">
                 <div class="form-group">

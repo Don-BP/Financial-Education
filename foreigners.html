@@ -51,9 +51,7 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a href="about.html" data-lang-key="nav_about">About Us</a></li>
-                                <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
                                 <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
-                                <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
                             </ul>
                         </div>
                     </li>
@@ -75,9 +73,7 @@
             <a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a>
             <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
             <a href="about.html" data-lang-key="nav_about">About Us</a>
-            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
             <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
-            <a href="resources.html" data-lang-key="nav_resources">Resources</a>
             <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
         </div>
     </header>
@@ -86,7 +82,7 @@
             const pageMap = {
                 'pension.html': 'learn', 'insurance.html': 'learn', 'investing.html': 'learn', 'foreigners.html': 'learn',
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
-                'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
+                'about.html': 'resources', 'glossary.html': 'resources'
             };
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             
@@ -118,30 +114,44 @@
             <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="foreigners_subtitle">Navigating a new financial system can be confusing. Here are the answers to the most common questions we hear from foreign residents.</p>
             
             <div class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
-                <h3 data-lang-key="foreigners_pension_q">What Happens to My Pension if I Leave Japan?</h3>
+                <h3 data-lang-key="foreigners_pension_q">What Happens to My Pension if I Leave Japan? (The 'Dattai Ichijikin' Trap)</h3>
                 <p data-lang-key="foreigners_pension_p1">This is the most critical question. If you are not a Japanese citizen and have paid into the pension system for at least 6 months, you are eligible for the <strong>Lump-sum Withdrawal Payment (脱退一時金 - Dattai Ichijikin)</strong> upon leaving Japan.</p>
                 <ul>
                     <li data-lang-key="foreigners_pension_li1"><strong>How it works:</strong> You apply within two years of permanently leaving Japan. You receive a refund based on your contribution period.</li>
-                    <li data-lang-key="foreigners_pension_li2"><strong>The Limitation:</strong> The refund calculation is currently capped at **5 years (60 months)** of payments, even if you paid for 10, 15, or more years. This means a significant portion of your contributions may not be returned.</li>
+                    <li data-lang-key="foreigners_pension_li2"><strong>The Trap:</strong> The refund calculation is currently capped at **5 years (60 months)** of payments, even if you paid for 10, 15, or more years. This means a significant portion of your hard-earned contributions may be lost if you stay in Japan mid-to-long term but eventually leave.</li>
                     <li data-lang-key="foreigners_pension_li3"><strong>The Consequence:</strong> Taking the lump-sum withdrawal voids all your contribution years. If you return to Japan later, your pension history starts from zero.</li>
                 </ul>
-                 <p><strong data-lang-key="foreigners_pension_vested">For Residents of 10+ Years:</strong> If you have contributed for 10 or more years, you are "vested" in the Japanese pension system and can no longer take the lump-sum. Instead, you are entitled to receive a Japanese pension for life, paid overseas, once you reach retirement age.</p>
+                 <p data-lang-key="foreigners_pension_vested"><strong>For Residents of 10+ Years:</strong> If you have contributed for 10 or more years, you are "vested" in the Japanese pension system and can no longer take the lump-sum. Instead, you are entitled to receive a Japanese pension for life, paid overseas, once you reach retirement age. This makes understanding your options before you hit the 10-year mark crucial.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" style="margin-bottom: 2rem;">
+                <h3 data-lang-key="foreigners_risk_title">Your Biggest Financial Risk in Japan Isn't the Market—It's Inaction</h3>
+                <p data-lang-key="foreigners_risk_p1">As a foreigner living in Japan, you likely have a solid understanding of basic financial principles. You know your money should be working for you, not just sitting in a bank. But here's the dangerous paradox: the comfort and stability of life in Japan often lead to financial inertia. The "I'll sort it out later" mindset is one of the biggest risks to your wealth.</p>
+                <p data-lang-key="foreigners_risk_p2">Every day of inaction has a real cost. It's another day your savings are eroded by inflation. And for many, it's a day closer to the 10-year pension cliff where your options become more limited. We help you overcome this inertia by turning your knowledge into an actionable plan, giving you the urgency and clarity to secure your financial future.</p>
             </div>
 
             <div class="two-col-layout" data-aos="fade-up">
                 <div class="text-content">
-                    <h3 data-lang-key="foreigners_totalization_title">Social Security Agreements: Your Strongest Tool</h3>
-                    <p data-lang-key="foreigners_totalization_p1">What many expats don't know is that Japan has <strong>Social Security Totalization Agreements</strong> with around 20 countries, including the USA, UK, Canada, Germany, Australia, and more.</p>
-                    <p data-lang-key="foreigners_totalization_p2">These agreements allow you to combine your periods of payment in both countries to meet the minimum eligibility requirements (usually 10 years) for a pension in both. For example, 7 years in Japan and 3 years in the US can allow you to meet the 10-year requirement for both. This prevents your paid premiums from being wasted.</p>
-                    <hr>
-                    <h3 data-lang-key="foreigners_portability_title">Portability of Assets: Planning Beyond Borders</h3>
-                    <p data-lang-key="foreigners_portability_p1">Due to currency risk and the limitations of domestic schemes if you leave Japan, a wise strategy for expats is to build an investment plan that is globally accessible and can be held in multiple currencies.</p>
-                    <p data-lang-key="foreigners_portability_p2">This ensures your wealth is secure and continues to grow, no matter where you live in the future. Learn more about these international strategies on our <a href="solutions.html">Smarter Solutions</a> page.</p>
+                    <h3 data-lang-key="foreigners_flow_title">Your Money is Already Flowing Out. Is It Working For You?</h3>
+                    <p data-lang-key="foreigners_flow_p1">Every month, your money flows out to pay for rent, utilities, food, and subscriptions like Netflix or Starbucks. This is a normal part of life.</p>
+                    <p data-lang-key="foreigners_flow_p2">Now, think of your savings and investments in the same way. It's money that should be flowing into a system that benefits <strong>you</strong>. Instead of letting it sit in a low-interest Japanese bank account where it loses value, you can direct it into an overseas investment system that actively works to grow your wealth. It's about making your money's outflow a productive one.</p>
                 </div>
                 <div class="image-content">
-                    <img src="images/world-map.jpg" alt="World map with arrows pointing between countries">
+                    <img src="images/money-flow.jpg" alt="Arrows showing money flowing from a wallet to various icons like a house, shopping cart, and investment chart">
                 </div>
             </div>
+
+            <div class="card" data-aos="fade-up" style="margin-top: 2rem; border-left: 5px solid var(--color-success);">
+                <h3 data-lang-key="foreigners_options_title">Thinking Beyond Japan's Borders</h3>
+                <p data-lang-key="foreigners_options_p1">Because of the limitations for long-term foreign residents (pension refund cap) and the poor growth environment in Japan, it is critical to consider international investment strategies. These solutions, accessible from Japan, offer several key advantages:</p>
+                <ul>
+                    <li data-lang-key="foreigners_options_li1"><strong>True Growth Potential:</strong> Access to professionally managed funds with significantly higher interest rate potential (e.g., over 6%) compared to Japan's near-zero rates.</li>
+                    <li data-lang-key="foreigners_options_li2"><strong>Portability:</strong> Your investment is not tied to your residency in Japan. If you decide to leave, your wealth moves with you, without the tax complications of moving money out of the country.</li>
+                    <li data-lang-key="foreigners_options_li3"><strong>Tax Efficiency:</strong> By investing directly into overseas accounts, you can potentially avoid the 15-20% income tax and high inheritance taxes associated with bringing large sums of money into or through the Japanese system.</li>
+                </ul>
+                 <p data-lang-key="foreigners_options_p2">We specialize in connecting foreigners with these well-regulated, reputable overseas financial companies. Learn more on our <a href="solutions.html">Smarter Solutions</a> page.</p>
+            </div>
+
         </section>
     </main>
 

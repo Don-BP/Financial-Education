@@ -51,9 +51,7 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a href="about.html" data-lang-key="nav_about">About Us</a></li>
-                                <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
                                 <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
-                                <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
                             </ul>
                         </div>
                     </li>
@@ -75,9 +73,7 @@
             <a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a>
             <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
             <a href="about.html" data-lang-key="nav_about">About Us</a>
-            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
             <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
-            <a href="resources.html" data-lang-key="nav_resources">Resources</a>
             <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
         </div>
     </header>
@@ -87,7 +83,7 @@
             const pageMap = {
                 'pension.html': 'learn', 'insurance.html': 'learn', 'investing.html': 'learn', 'foreigners.html': 'learn',
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
-                'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
+                'about.html': 'resources', 'glossary.html': 'resources'
             };
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             
@@ -116,26 +112,59 @@
 
     <main class="container">
         <section class="content-section">
-            <h2 class="section-title" data-aos="fade-up" data-lang-key="about_title">Our Mission: Your Financial Clarity</h2>
-            <div class="two-col-layout" data-aos="fade-up">
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="about_title">Meet Our Team</h2>
+            <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="about_subtitle">We are dedicated to providing the clarity and guidance you need to succeed.</p>
+
+            <!-- Profile 1: Founder -->
+            <div class="two-col-layout" data-aos="fade-up" style="align-items: center; margin-bottom: 5rem;">
                 <div class="image-content">
-                    <img src="images/profile-photo.jpg" alt="A professional and friendly headshot of the advisor" style="aspect-ratio: 1/1; object-fit: cover;">
+                    <img src="images/profile-photo.jpg" alt="A professional and friendly headshot of the founder" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 50%;">
                 </div>
                 <div class="text-content">
-                    <h3 data-lang-key="about_h3_1">Why We Started This</h3>
-                    <p data-lang-key="about_p1">After years of living and working in Japan, I saw a recurring problem: intelligent, hard-working people—both Japanese and foreign residents—were trapped by outdated financial advice. They were diligently saving money in banks where it was losing value, buying expensive insurance policies that didn't help them grow wealth, and feeling anxious about a pension system they knew was under strain.</p>
-                    <p data-lang-key="about_p2">The information gap was huge. Complex topics were made to feel intimidating, and the most common "solutions" often benefited the institutions selling them more than the clients themselves. I started this platform to change that.</p>
+                    <h3 data-lang-key="about_founder_name" style="margin-bottom: 0.25rem;">Your Name Here</h3>
+                    <p data-lang-key="about_founder_title" style="font-weight: 600; margin-top: 0; color: var(--text-secondary); font-size: 1.1rem;">Founder</p>
+                    <p data-lang-key="about_founder_bio">[Placeholder Bio] As the founder, my mission is to demystify finance for everyone living in Japan. I've seen firsthand how a lack of clear, actionable information holds people back from achieving their financial goals, and I am committed to providing the education and tools necessary to change that.</p>
                 </div>
             </div>
-             <div class="card" style="margin-top: 2rem;" data-aos="fade-up">
+
+            <!-- Profile 2: Head Financial Planner -->
+            <div class="two-col-layout two-col-layout--text-first" data-aos="fade-up" style="align-items: center; margin-bottom: 5rem;">
+                <div class="text-content">
+                    <h3 data-lang-key="about_planner_name" style="margin-bottom: 0.25rem;">Jane Smith</h3>
+                    <p data-lang-key="about_planner_title" style="font-weight: 600; margin-top: 0; color: var(--text-secondary); font-size: 1.1rem;">Head Financial Planner</p>
+                    <p data-lang-key="about_planner_p1">[Placeholder Bio] Jane brings over 15 years of experience in global financial planning, with a specialization in helping expatriates and Japanese nationals navigate the complexities of cross-border finance. Her approach is rooted in demystifying finance and empowering clients with the knowledge to make confident decisions.</p>
+                    <p data-lang-key="about_planner_p2">[Placeholder Bio] She believes that financial planning is not just about numbers, but about achieving life goals. Whether you're planning for retirement, education, or simply want to make your money work harder, Jane is passionate about creating strategies that align with your personal vision for the future.</p>
+                </div>
+                <div class="image-content">
+                    <img src="images/profile-photo-2.jpg" alt="A professional and friendly headshot of the head financial planner" style="aspect-ratio: 1/1; object-fit: cover; border-radius: 50%;">
+                </div>
+            </div>
+
+             <!-- Our Story Section -->
+            <div class="card" data-aos="fade-up" style="margin-bottom: 4rem;">
+                <h3 data-lang-key="about_story_title">Our Story: Why We Started</h3>
+                <p data-lang-key="about_p1">After years of living and working in Japan, I saw a recurring problem: intelligent, hard-working people—both Japanese and foreign residents—were trapped by outdated financial advice. They were diligently saving money in banks where it was losing value, buying expensive insurance policies that didn't help them grow wealth, and feeling anxious about a pension system they knew was under strain.</p>
+                <p data-lang-key="about_p2">The information gap was huge. Complex topics were made to feel intimidating, and the most common "solutions" often benefited the institutions selling them more than the clients themselves. I started this platform to change that.</p>
+            </div>
+
+             <div class="card" data-aos="fade-up" style="margin-bottom: 4rem;">
                 <h3 data-lang-key="about_h3_2">Our Philosophy: Education First</h3>
-                <p data-lang-key="about_p3">We believe that a confident financial decision is an educated one. Our goal isn't to sell you a specific product. It's to give you the clarity and understanding to see the difference between a tool that builds your wealth and one that drains it.</p>
+                <p data-lang-key="about_p3_old">We believe that a confident financial decision is an educated one. Our goal isn't to sell you a specific product. It's to give you the clarity and understanding to see the difference between a tool that builds your wealth and one that drains it.</p>
                 <ul>
                     <li data-lang-key="about_li1"><strong>We are educators, not high-pressure salespeople.</strong> Our seminars are 100% educational.</li>
                     <li data-lang-key="about_li2"><strong>We believe in transparency.</strong> We expose hidden fees and explain the real costs of financial products.</li>
                     <li data-lang-key="about_li3"><strong>We empower you to build your own financial "house."</strong> By understanding the foundation, walls, and roof, you can take control of your future.</li>
+                    <li data-lang-key="about_li4"><strong>Our purpose is to help people, not just sell products.</strong> We believe in helping you build a better future, even if we only help one person at a time. We are not an insurance bank or a stockbroker; we are your independent financial educators.</li>
+                    <li data-lang-key="about_li5"><strong>We focus on actionable knowledge.</strong> It's not enough to know about concepts like compound interest. Our goal is to give you the clear, concrete steps and confidence to put that knowledge to work for you.</li>
                 </ul>
             </div>
+
+             <div class="card" style="margin-bottom: 4rem; text-align: center; border-left: 5px solid var(--color-success);" data-aos="fade-up">
+                <h3 data-lang-key="about_consult_h3">Ready for a Personal Consultation?</h3>
+                <p data-lang-key="about_consult_p">While our seminars provide a great foundation, a one-on-one consultation allows us to address your unique situation, goals, and concerns. Let's create a personalized roadmap for your financial freedom.</p>
+                <a href="#" class="btn btn-primary" data-lang-key="about_consult_btn">Request a Free Consultation</a>
+            </div>
+            
              <div class="seminar-cta-block" data-aos="fade-up">
                 <h3 data-lang-key="about_cta_h3">Ready to Take the First Step?</h3>
                 <p data-lang-key="about_cta_p">The best investment you can ever make is in your own knowledge. Join our free, no-obligation seminar to gain the clarity you need to start building a truly secure future.</p>

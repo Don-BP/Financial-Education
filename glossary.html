@@ -51,9 +51,7 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a href="about.html" data-lang-key="nav_about">About Us</a></li>
-                                <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
                                 <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
-                                <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
                             </ul>
                         </div>
                     </li>
@@ -75,9 +73,7 @@
             <a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a>
             <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
             <a href="about.html" data-lang-key="nav_about">About Us</a>
-            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
             <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
-            <a href="resources.html" data-lang-key="nav_resources">Resources</a>
             <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
         </div>
     </header>
@@ -86,7 +82,7 @@
             const pageMap = {
                 'pension.html': 'learn', 'insurance.html': 'learn', 'investing.html': 'learn', 'foreigners.html': 'learn',
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
-                'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
+                'about.html': 'resources', 'glossary.html': 'resources'
             };
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             
@@ -145,6 +141,31 @@
                 <h4 data-lang-key="glossary_term7_title"><strong>脱退一時金 (Dattai Ichijikin)</strong> - Lump-sum Withdrawal Payment</h4>
                 <p data-lang-key="glossary_term7_def">A one-time refund of pension contributions available to non-Japanese citizens who have paid for at least 6 months and permanently leave Japan.</p>
             </div>
+        </section>
+
+        <section id="resources" class="content-section" style="padding-top: 0;">
+            <hr style="margin-bottom: 4rem;">
+            <h2 class="section-title" data-aos="fade-up" data-lang-key="glossary_resources_title">Helpful Resources</h2>
+            <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="glossary_resources_subtitle">Knowledge is power. Here are links to trusted sources to continue your financial literacy journey.</p>
+            
+            <div class="card" data-aos="fade-up">
+                <h3 data-lang-key="resources_official_title">Official Government & Financial Sites</h3>
+                <ul>
+                    <li><a href="https://www.nenkin.go.jp/n_net/" target="_blank" rel="noopener noreferrer" data-lang-key="resources_official_nenkin_net">Nenkin Net</a> - to check your official pension record.</li>
+                    <li><a href="https://www.fsa.go.jp/en/index.html" target="_blank" rel="noopener noreferrer" data-lang-key="resources_official_fsa">Financial Services Agency (FSA)</a> - Japan's financial services regulator.</li>
+                    <li><a href="https://www.boj.or.jp/en/" target="_blank" rel="noopener noreferrer" data-lang-key="resources_official_boj">Bank of Japan (BOJ)</a> - for information on inflation data and monetary policy.</li>
+                </ul>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;" data-aos="fade-up">
+                <h3 data-lang-key="resources_reading_title">Recommended Reading (For Philosophy)</h3>
+                <p data-lang-key="resources_reading_p">These books teach the core philosophies of investing and wealth-building that have changed the mindset of millions of people worldwide.</p>
+                <ul>
+                    <li data-lang-key="resources_reading_book1"><strong>The Simple Path to Wealth by J.L. Collins</strong> - The definitive guide to understanding the power and simplicity of index investing.</li>
+                    <li data-lang-key="resources_reading_book2"><strong>I Will Teach You to Be Rich by Ramit Sethi</strong> - A practical system for automating your spending, conscious use of money, and living a rich life.</li>
+                </ul>
+            </div>
+             <p style="margin-top:2rem; text-align:center; font-style:italic;" data-aos="fade-up" data-lang-key="resources_disclaimer"><strong>Disclaimer:</strong> We are not affiliated with these resources. They are provided for educational purposes.</p>
         </section>
     </main>
 

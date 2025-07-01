@@ -43,9 +43,7 @@
                         <div class="dropdown-menu">
                             <ul>
                                 <li><a href="about.html" data-lang-key="nav_about">About Us</a></li>
-                                <li><a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a></li>
                                 <li><a href="glossary.html" data-lang-key="nav_glossary">Glossary</a></li>
-                                <li><a href="resources.html" data-lang-key="nav_resources">Resources</a></li>
                             </ul>
                         </div>
                     </li>
@@ -67,9 +65,7 @@
             <a href="solutions.html" data-lang-key="nav_solutions">Smarter Solutions</a>
             <a href="retirement-calculator.html" data-lang-key="nav_retirement_calc">Retirement Calc</a>
             <a href="about.html" data-lang-key="nav_about">About Us</a>
-            <a href="casestudies.html" data-lang-key="nav_casestudies">Case Studies</a>
             <a href="glossary.html" data-lang-key="nav_glossary">Glossary</a>
-            <a href="resources.html" data-lang-key="nav_resources">Resources</a>
             <a href="seminars.html" class="btn btn-primary" data-lang-key="nav_seminar">Free Seminar</a>
         </div>
     </header>
@@ -78,7 +74,7 @@
             const pageMap = {
                 'pension.html': 'learn', 'insurance.html': 'learn', 'investing.html': 'learn', 'foreigners.html': 'learn',
                 'health-check.html': 'plan', 'solutions.html': 'plan', 'retirement-calculator.html': 'plan',
-                'about.html': 'resources', 'casestudies.html': 'resources', 'glossary.html': 'resources', 'resources.html': 'resources'
+                'about.html': 'resources', 'glossary.html': 'resources'
             };
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
             
@@ -136,6 +132,12 @@
                     <li data-lang-key="seminar_discover_li5">✅ <strong>Smarter Alternatives:</strong> The fundamental differences between saving in Japan and smart, regulated, global investment strategies that are accessible from Japan.</li>
                 </ul>
             </div>
+
+            <div class="card" style="margin-bottom: 4rem; text-align: center; border-left: 5px solid var(--color-success);" data-aos="fade-up">
+                <h3 data-lang-key="seminar_consult_h3">Can't Make a Seminar? Request a Personal Consultation</h3>
+                <p data-lang-key="seminar_consult_p" style="max-width: 700px; margin-left: auto; margin-right: auto;">If our seminar times don't fit your schedule, or if you prefer a one-on-one discussion, we are happy to arrange a private, no-obligation consultation to discuss your specific financial situation.</p>
+                <a href="#" class="btn btn-primary" data-lang-key="seminar_consult_btn">Request a Free Consultation</a>
+            </div>
             
             <h3 style="text-align:center; margin: 4rem 0 2rem 0;" data-aos="fade-up" data-lang-key="seminar_register_title">Register for an Upcoming Online Event</h3>
             <div id="seminar-list-container" data-aos="fade-up">
@@ -159,6 +161,92 @@
                 </div>
             </section>
 
+            <section class="content-section" style="padding-bottom: 0;">
+                <h2 class="section-title" data-aos="fade-up" data-lang-key="seminar_casestudies_title">Real Stories, Real Results</h2>
+                <p class="subtitle" style="text-align:center; max-width: 800px; margin: -2rem auto 3rem auto;" data-aos="fade-up" data-lang-key="seminar_casestudies_subtitle">The names have been changed, but the financial challenges are real. Click on each story to see how understanding a few key principles transformed these individuals' futures.</p>
+                <div class="accordion-container" data-aos="fade-up">
+                    <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case1_title">"Tanaka-san": The Hidden Insurance Trap</button>
+                        <div class="accordion-panel">
+                            <p data-lang-key="case1_p1"><strong>Situation:</strong> Tanaka-san (45) was diligently paying ¥30,000/month into a "savings-type" insurance policy, believing it was his primary retirement fund.</p>
+                            <p data-lang-key="case1_p2"><strong>Revelation:</strong> Using our calculator, he discovered that after 20 years, his ¥7.2 million in payments would only be worth ¥7.5 million—a minuscule return. An investment plan could have reached over ¥15 million.</p>
+                            <p data-lang-key="case1_p3"><strong>Outcome:</strong> He restructured his plan, buying cheaper term insurance for protection and investing the difference, doubling his potential retirement fund.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case2_title">"The Cost of Waiting": Sato-san's ¥10 Million Mistake</button>
+                        <div class="accordion-panel">
+                            <p data-lang-key="case2_p1"><strong>Situation:</strong> Sato-san (35) knew she should invest but kept saying "I'll do it someday."</p>
+                            <p data-lang-key="case2_p2"><strong>Revelation:</strong> The interactive tool on our Investing page showed that starting at 35 vs. 30 would cost her over ¥10M in growth by age 65 due to lost compounding time.</p>
+                            <p data-lang-key="case2_p3"><strong>Outcome:</strong> The shocking visual motivated her to start an automated monthly investment plan immediately.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case3_title">"John's" Expat Pension Panic</button>
+                        <div class="accordion-panel">
+                             <p data-lang-key="case3_p1"><strong>Situation:</strong> John (42), a foreign resident, was worried about losing 15 years of pension payments when he planned to leave Japan.</p>
+                             <p data-lang-key="case3_p2"><strong>Revelation:</strong> He learned about the Lump-sum Withdrawal was capped at 5 years and that he could access global investments from Japan.</p>
+                             <p data-lang-key="case3_p3"><strong>Outcome:</strong> He started a portable investment plan, creating a nest egg independent of his residency status, giving him true financial freedom.</p>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case4_title">"The Illusion of Safety": Suzuki-san's Bank Account</button>
+                        <div class="accordion-panel">
+                             <p data-lang-key="case4_p1"><strong>Situation:</strong> Suzuki-san (50) had ¥20 million saved in a major Japanese bank, feeling secure.</p>
+                             <p data-lang-key="case4_p2"><strong>Revelation:</strong> She realized that with 2% inflation, her savings were losing ¥400,000 in purchasing power each year, while her 0.001% interest earned only ¥200. She was silently losing money.</p>
+                             <p data-lang-key="case4_p3"><strong>Outcome:</strong> She moved a portion of her savings into a diversified, inflation-beating investment portfolio.</p>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case5_title">"Building the House": The Kimura Family's Plan</button>
+                        <div class="accordion-panel">
+                             <p data-lang-key="case5_p1"><strong>Situation:</strong> The Kimura couple felt overwhelmed and didn't know where to start with financial planning.</p>
+                            <p data-lang-key="case5_p2"><strong>Revelation:</strong> The "Build Your House" analogy provided a clear, step-by-step framework: understand the foundation (pension), build the walls (investments), and protect it with a roof (proper insurance).</p>
+                            <p data-lang-key="case5_p3"><strong>Outcome:</strong> They created their first-ever comprehensive financial plan, giving them immense peace of mind.</p>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case6_title">"Retirement Gap Shock": Watanabe-san's Goal</button>
+                        <div class="accordion-panel">
+                             <p data-lang-key="case6_p1"><strong>Situation:</strong> Watanabe-san (48) assumed his pension would be enough for his desired ¥300,000/month retirement lifestyle.</p>
+                            <p data-lang-key="case6_p2"><strong>Revelation:</strong> The Retirement Calculator showed his estimated pension was only ¥180,000/month, leaving a ¥120,000 "gap." This meant he needed to accumulate a nest egg of ¥36 million to cover 25 years of retirement.</p>
+                            <p data-lang-key="case6_p3"><strong>Outcome:</strong> With a clear target number, he created an aggressive savings and investment plan to bridge the gap.</p>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case7_title">"Better Off Dead": The Life Insurance Fallacy</button>
+                        <div class="accordion-panel">
+                             <p data-lang-key="case7_p1"><strong>Situation:</strong> A young couple bought a whole life insurance policy as their first "investment."</p>
+                            <p data-lang-key="case7_p2"><strong>Revelation:</strong> They calculated that the cash value after 20 years would be less than what they paid in. The only way to "profit" was if one of them passed away early.</p>
+                            <p data-lang-key="case7_p3"><strong>Outcome:</strong> They realized they were planning for death, not for life, and shifted their strategy to prioritize wealth building for their shared future.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case8_title">"The Freelancer's Dilemma": No Kosei Nenkin</button>
+                        <div class="accordion-panel">
+                             <p data-lang-key="case8_p1"><strong>Situation:</strong> A freelance designer (38) was only paying into the basic Kokumin Nenkin.</p>
+                            <p data-lang-key="case8_p2"><strong>Revelation:</strong> The pension calculator showed her an estimated retirement income of only ~¥65,000/month. She had no company pension to supplement it.</p>
+                            <p data-lang-key="case8_p3"><strong>Outcome:</strong> Realizing she was solely responsible for her retirement, she started using a mix of tax-advantaged accounts and a separate investment account to build her "private pension."</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case9_title">"The NISA Trap": Investing Without Knowledge</button>
+                        <div class="accordion-panel">
+                             <p data-lang-key="case9_p1"><strong>Situation:</strong> Ito-san opened a NISA account but was too scared to choose an investment, so the money just sat as cash.</p>
+                            <p data-lang-key="case9_p2"><strong>Revelation:</strong> He learned that NISA is just a tax-free "container." The container is useless unless you fill it with assets that can actually grow.</p>
+                            <p data-lang-key="case9_p3"><strong>Outcome:</strong> After attending a seminar to understand the basics of index funds, he finally invested his NISA contribution, turning the tax-free wrapper into a powerful growth tool.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-button" data-lang-key="case10_title">"From Gaman to Growth": Breaking the Cycle</button>
+                        <div class="accordion-panel">
+                             <p data-lang-key="case10_p1"><strong>Situation:</strong> A family was stuck in the "gaman" mindset, enduring low bank interest because it felt "safe" and familiar.</p>
+                            <p data-lang-key="case10_p2"><strong>Revelation:</strong> Seeing the "Three Coffee Shops" analogy made them realize their "safe" approach was actually a guaranteed loss against inflation. They were stuck as Shop B, not building a Shop C.</p>
+                            <p data-lang-key="case10_p3"><strong>Outcome:</strong> They overcame their fear of the unknown and made their first strategic investment, breaking a generational cycle of financial inertia.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
@@ -176,5 +264,33 @@
     <script src="js/translations.js"></script>
     <script src="js/language.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionBtns = document.querySelectorAll('.accordion-button');
+            accordionBtns.forEach(button => {
+                button.addEventListener('click', () => {
+                    const isActive = button.classList.contains('active');
+                    const panel = button.nextElementSibling;
+                    
+                    // Close all other accordions for single-open behavior
+                    accordionBtns.forEach(btn => {
+                        if (btn !== button) {
+                            btn.classList.remove('active');
+                            btn.nextElementSibling.style.maxHeight = null;
+                        }
+                    });
+
+                    // Toggle the clicked accordion
+                    if (!isActive) {
+                        button.classList.add('active');
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    } else {
+                        button.classList.remove('active');
+                        panel.style.maxHeight = null;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
